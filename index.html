@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The_Stackly_Dightal_Marketing</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .logo {
+            width: 450px; /* Logo size */
+            animation: scaleUp 2s ease-in-out, fadeOut 4s ease-in-out forwards;
+        }
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.postimg.cc/Nj51fNVZ/startinglogo.png" alt="Logo" class="logo">
+    <script>
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 4000); // Redirect after 4 seconds
+    </script>
+</body>
+</html>

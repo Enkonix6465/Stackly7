@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard_The_Stackly_Dightal_Marketing</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>☰ Dashboard</h2>
+        <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+        <a href="#" class="active" onclick="showSection('users')">👤 Users</a>
+        <a href="#" onclick="showSection('campaigns')">📈 Campaigns</a>
+        <a href="#" onclick="showSection('content')">✏️ Content</a>
+        <a href="#" onclick="showSection('leads')">👥 Leads</a>
+        <a href="#" onclick="showSection('analytics')">📊 Analytics</a>
+        <a href="#" onclick="showSection('integrations')">⚙️ Integrations</a>
+    </div>
+
+    <div class="main-content">
+        <header>Admin Dashboard</header>
+        
+        <!-- Users Section -->
+        <div id="usersSection">
+            <div class="card">
+                Total Registered Users: <span id="userCount">0</span>
+            </div>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Registered At</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Campaigns Section (Enhanced Design) -->
+<div id="campaignsSection" style="display:none;">
+    <h2 style="color: #007BFF;">Campaigns Overview</h2>
+
+
+    <!-- Stats Summary -->
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <p id="totalUsersStat">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Today's Registrations</h3>
+            <p id="todaysUsersStat">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Peak Day</h3>
+            <p id="peakDayStat">N/A</p>
+        </div>
+    </div>
+
+    <!-- Chart Area -->
+    <div class="chart-container">
+        <canvas id="campaignChart"></canvas>
+    </div>
+</div>
+
+
+        <!-- Content Section -->
+        <div id="contentSection" style="display:none;">
+            <h2>Content Management</h2>
+            
+            <!-- Subsection Cards -->
+            <div class="content-subsections">
+                <div class="content-card" onclick="showContentPanel('blog')">
+                    <h3>📝 Blog Posts</h3>
+                    <p>Create, edit, and track all blog content for Real estate and property listings.</p>
+                </div>
+                <div class="content-card" onclick="showContentPanel('social')">
+                    <h3>📱 Social Media Content</h3>
+                    <p>Manage and schedule social media campaigns and posts.</p>
+                </div>
+                <div class="content-card" onclick="showContentPanel('email')">
+                    <h3>📧 Email Campaigns</h3>
+                    <p>Plan and create professional real estate emails.</p>
+                </div>
+            </div>
+
+            <!-- Dynamic Panels -->
+            <div class="content-panels">
+                <!-- Blog Panel -->
+                <div id="blogPanel" class="content-panel">
+                    <h3>📝 Blog Posts</h3>
+                    
+                    <!-- Blog Creation Form -->
+                    <form id="blogForm">
+                        <div class="input-group">
+                            <label for="blogTitle">Blog Title</label>
+                            <input type="text" id="blogTitle" placeholder="Enter blog title" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="blogImage">Blog Image URL</label>
+                            <input type="url" id="blogImage" placeholder="Enter blog image URL" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="authorName">Author Name</label>
+                            <input type="text" id="authorName" placeholder="Enter author name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="authorImage">Author Profile Image URL</label>
+                            <input type="url" id="authorImage" placeholder="Enter author profile image URL" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="blogSummary">Blog Summary</label>
+                            <textarea id="blogSummary" placeholder="Enter a short summary" required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="blogContent">Blog Content</label>
+                            <textarea id="blogContent" placeholder="Enter blog content" required></textarea>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <h3>Social Media Links (Optional)</h3>
+                        <div class="input-group">
+                            <label for="instagramLink">Instagram</label>
+                            <input type="url" id="instagramLink" placeholder="Enter Instagram URL">
+                        </div>
+                        <div class="input-group">
+                            <label for="facebookLink">Facebook</label>
+                            <input type="url" id="facebookLink" placeholder="Enter Facebook URL">
+                        </div>
+                        <div class="input-group">
+                            <label for="whatsappLink">WhatsApp</label>
+                            <input type="url" id="whatsappLink" placeholder="Enter WhatsApp URL">
+                        </div>
+                        <div class="input-group">
+                            <label for="linkedinLink">LinkedIn</label>
+                            <input type="url" id="linkedinLink" placeholder="Enter LinkedIn URL">
+                        </div>
+
+                        <button type="submit" class="btn">Save Blog</button>
+                    </form>
+
+                    <!-- Existing Blogs -->
+                    <h4>Existing Blogs</h4>
+                    <ul id="blogList"></ul>
+                </div>
+                <div id="socialPanel" class="content-panel" style="display:none;">
+                    <h3>📱 Social Media Content</h3>
+                    <ul>
+                        <li>Schedule social media campaigns</li>
+                        <li>View social content calendar</li>
+                        <li>Manage trending hashtags</li>
+                    </ul>
+                </div>
+                <div id="emailPanel" class="content-panel" style="display:none;">
+                    <h3>📧 Email Campaigns</h3>
+                    <ul>
+                        <li>Design new email templates</li>
+                        <li>View email performance metrics</li>
+                        <li>Manage mailing lists</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="leadsSection" style="display:none;">
+            <h2>Leads</h2>
+            
+
+            <!-- Leads Panel -->
+<div id="leadsPanel" class="content-panel">
+    <h3>Lead Details</h3>
+    <div class="leads-container">
+        <!-- Lead Card 1 -->
+        <div class="lead-card">
+            <div class="lead-card-inner">
+                <!-- Front Side -->
+                <div class="lead-card-front">
+                    <img src="https://i.pinimg.com/1200x/55/63/31/556331581172c567af13dc5787455d74.jpg" alt="Lead 1">
+                    <h4>Prudhvi Raj</h4>
+                    <p>Marketing Lead</p>
+                </div>
+                <!-- Back Side -->
+                <div class="lead-card-back">
+                    <h4>Prudhvi Raj</h4>
+                    <p>Email: prudhvi@enkonix.in</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lead Card 2 -->
+        <div class="lead-card">
+            <div class="lead-card-inner">
+                <div class="lead-card-front">
+                    <img src="https://i.pinimg.com/736x/6e/92/b8/6e92b82848eade0fd33f0cff335ee2d0.jpg">
+                    <h4>Bhavya Sharma</h4>
+                    <p>Property Advisor</p>
+                </div>
+                <div class="lead-card-back">
+                    <h4>Bhavya Sharma</h4>
+                    <p>Email: bhavya@enkonix.in</p>
+                    <p>Phone: +91 91234 56789</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lead Card 3 -->
+        <div class="lead-card">
+            <div class="lead-card-inner">
+                <div class="lead-card-front">
+                    <img src="https://i.pinimg.com/736x/04/32/0f/04320f63f177eac45bfeac2b8d0436e6.jpg" alt="Lead 3">
+                    <h4>Ramesh Kumar</h4>
+                    <p>Client Relations Manager</p>
+                </div>
+                <div class="lead-card-back">
+                    <h4>Ramesh Kumar</h4>
+                    <p>Email: ramesh@enkonix.in</p>
+                    <p>Phone: +91 99876 54321</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Leadership Insights Section -->
+<div id="leadershipInsights" class="content-panel">
+    <h2 class="section-title">Leadership Insights</h2>
+
+    <div class="stats-wrapper">
+        <div class="stat-card">
+            <h3>Total Leads</h3>
+            <div class="donut-chart" data-percent="124" data-max="200"></div>
+            <p class="stat-number">124</p>
+        </div>
+        <div class="stat-card">
+            <h3>Active Campaigns</h3>
+            <div class="donut-chart" data-percent="18" data-max="50"></div>
+            <p class="stat-number">18</p>
+        </div>
+        <div class="stat-card">
+            <h3>Success Rate</h3>
+            <div class="donut-chart" data-percent="92" data-max="100"></div>
+            <p class="stat-number">92%</p>
+        </div>
+    </div>
+
+    <!-- Progress Bars -->
+    <div class="progress-container">
+        <h4>Team Performance</h4>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%;">85%</div>
+        </div>
+        <h4>Sales and Marketing Reach</h4>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 70%;">70%</div>
+        </div>
+    </div>
+
+    <!-- Motivational Card -->
+    <div class="quote-card">
+        <p>"Leadership is not about titles, positions, or flowcharts. It is about one life influencing another."</p>
+        <span>- John C. Maxwell</span>
+    </div>
+</div>
+
+        </div>
+
+        <div id="analyticsSection" class="content-panel" style="display:none;">
+            <h2>📊 User Analytics</h2>
+
+            <!-- Charts Container -->
+            <div class="chart-section">
+                <canvas id="userGrowthChart" height="150"></canvas>
+            </div>
+
+            <!-- Summary Info -->
+            <div class="analytics-summary">
+                <p><strong>Total Registered Users:</strong> <span id="totalUsers">0</span></p>
+                <p><strong>Total Logins:</strong> <span id="totalLogins">0</span></p>
+            </div>
+        </div>
+        
+
+        <div id="integrationsSection" style="display:none;">
+            <h2>⚙️ Integrations</h2>
+            <p>Manage your marketing integrations here.</p>
+        
+            <div class="integration-panel">
+                <!-- Google Analytics -->
+                <div class="integration-item">
+                    <h3>Google Analytics</h3>
+                    <label class="switch">
+                        <input type="checkbox" id="gaToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <input type="text" id="gaKey" placeholder="Enter Google Analytics Tracking ID">
+                    <button class="test-btn" onclick="testConnection('gaKey', 'gaStatus')">Test Connection</button>
+                    <p class="status" id="gaStatus"></p>
+                </div>
+        
+                <!-- Facebook Pixel -->
+                <div class="integration-item">
+                    <h3>Facebook Pixel</h3>
+                    <label class="switch">
+                        <input type="checkbox" id="fbToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <input type="text" id="fbKey" placeholder="Enter Facebook Pixel ID">
+                    <button class="test-btn" onclick="testConnection('fbKey', 'fbStatus')">Test Connection</button>
+                    <p class="status" id="fbStatus"></p>
+                </div>
+        
+                <!-- Mailchimp -->
+                <div class="integration-item">
+                    <h3>Mailchimp</h3>
+                    <label class="switch">
+                        <input type="checkbox" id="mcToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <input type="text" id="mcKey" placeholder="Enter Mailchimp API Key">
+                    <button class="test-btn" onclick="testConnection('mcKey', 'mcStatus')">Test Connection</button>
+                    <p class="status" id="mcStatus"></p>
+                </div>
+        
+                <button class="btn" id="saveIntegrations">Save Integrations</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="analytics.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+/* Hero Section with Background Video */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+    z-index: -1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation-delay: 0.3s;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation-delay: 0.5s;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  /* General Section Styling */
+.section {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #1f1f1f, #2e2e2e);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Container Styling */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Heading Style */
+  .section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #00aeff;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f9d342;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Paragraphs */
+  .section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #eeeeee;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .section h2 {
+      font-size: 2rem;
+    }
+    .section p {
+      font-size: 1rem;
+    }
+  }
+  .our-story-section {
+    background: linear-gradient(to right, #143, #565656, #000000);
+    /* Hero Section with Background Video */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+    z-index: -1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation-delay: 0.3s;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    animation-delay: 0.5s;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
+    padding: 100px 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .our-story-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+  .story-text {
+    flex: 1 1 500px;
+    animation: fadeInLeft 1.2s ease both;
+  }
+  
+  .story-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: #00c5f1;
+  }
+  
+  .story-text h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffffff;
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+  
+  .story-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 15px;
+  }
+  
+  .story-animation {
+    flex: 1 1 400px;
+    animation: fadeInRight 1.2s ease both;
+  }
+  
+  .story-animation img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Fade animations */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .our-story-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .story-text, .story-animation {
+      flex: 1 1 100%;
+    }
+  
+    .story-text h2 {
+      font-size: 2rem;
+    }
+  }
+  .story-animation {
+    flex: 1 1 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInRight 1.2s ease both;
+  }
+  
+  .story-animation img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .story-animation img:hover {
+    transform: scale(1.05);
+  }
+  .team-section {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .team-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .team-card {
+    background: #2c2c2c;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 320px;
+    flex: 1 1 280px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  }
+  
+  .team-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .team-card h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  
+  .team-card .role {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .team-card p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .why-choose-section {
+    background: linear-gradient(to right, #143, #565656, #000000);
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .why-choose-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    color: #111;
+  }
+  
+  .why-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .why-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    max-width: 320px;
+    flex: 1 1 280px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  .why-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .why-card h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .why-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+  }
+  .cta-section {
+    background: linear-gradient(to right, #143, #565656, #000000);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .cta-content {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .cta-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .cta-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
