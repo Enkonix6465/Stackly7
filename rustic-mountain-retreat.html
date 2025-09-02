@@ -12,6 +12,270 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
+    <script>
+      // Translation object for all text content
+      const translations = {
+        en: {
+          home: "Home",
+          home1: "Home 1",
+          home2: "Home 2",
+          about: "About Us",
+          services: "Services",
+          allServices: "All Services",
+          modernFamilyHome: "Modern Family Home",
+          luxuryDowntownApartment: "Luxury Downtown Apartment",
+          suburbanFamilyEstate: "Suburban Family Estate",
+          beachfrontLuxuryVilla: "Beachfront Luxury Villa",
+          skylinePenthouseSuite: "Skyline Penthouse Suite",
+          rusticMountainRetreat: "Rustic Mountain Retreat",
+          blog: "Blog",
+          contact: "Contact Us",
+          logout: "Logout",
+          heroTitle: "Rustic Mountain Retreat",
+          heroDesc: "Experience the perfect blend of style and comfort in our Rustic Mountain Retreat.",
+          features: "Features",
+          featuresDesc: "Escape to the serenity of nature with this charming Rustic Mountain Retreat, where timeless design meets cozy comfort. Surrounded by breathtaking mountain views, this home features warm wooden interiors, a stone fireplace for relaxing evenings, and spacious living areas that bring the outdoors in. The modern-yet-rustic kitchen is perfect for hearty family meals, while the expansive deck offers the ideal spot to watch sunsets over the peaks. Every detail is crafted for a peaceful, rejuvenating mountain lifestyle.",
+          feature1: "Breathtaking panoramic mountain views",
+          feature2: "Cozy stone fireplace for relaxing evenings",
+          feature3: "Rustic kitchen with modern appliances",
+          feature4: "Eco-friendly features for sustainable living",
+          contactButton: "Contact Us",
+          gallery: "Gallery",
+          livingRoom: "Living Room",
+          kitchen: "Kitchen",
+          bedroom: "Bedroom",
+          backyard: "Backyard",
+          price: "Price",
+          priceValue: "$850,000",
+          priceDesc: "This beautiful Rustic Mountain Retreat is available at an affordable price. Contact us today to make it yours!",
+          testimonials: "What Our Clients Say",
+          testimonial1: '"This home has transformed our family life. The design is perfect for our needs!"',
+          testimonial1By: "- The Smith Family",
+          testimonial2: '"We love the modern amenities and the spacious layout. Highly recommend!"',
+          testimonial2By: "- The Johnsons",
+          testimonial3: "'A beautiful home that combines style and comfort. We couldn\'t be happier!'",
+          testimonial3By: "- The Browns",
+          testimonial4: "'Best investment we\'ve ever made. The team was so helpful during the entire process!'",
+          testimonial4By: "- The Martinez Family",
+          testimonial5: '"Perfect location, great community, and amazing house design!"',
+          testimonial5By: "- The Robinsons",
+          interested: "Interested in this property?",
+          contactMore: "Contact us for more information or to schedule a visit.",
+          quickLinks: "Quick Links",
+          ourServices: "Our Services",
+          contactFooter: "Contact Us",
+          email: "Email: info@dreamhomes.com",
+          phone: "Phone: +91-9876543210"
+        },
+        ar: {
+          home: "الرئيسية",
+          home1: "الصفحة الرئيسية 1",
+          home2: "الصفحة الرئيسية 2",
+          about: "معلومات عنا",
+          services: "الخدمات",
+          allServices: "كل الخدمات",
+          modernFamilyHome: "منزل عائلي حديث",
+          luxuryDowntownApartment: "شقة فاخرة في وسط المدينة",
+          suburbanFamilyEstate: "عقار عائلي في الضواحي",
+          beachfrontLuxuryVilla: "فيلا فاخرة على الشاطئ",
+          skylinePenthouseSuite: "جناح بنتهاوس سكاي لاين",
+          rusticMountainRetreat: "ملاذ جبلي ريفي",
+          blog: "مدونة",
+          contact: "اتصل بنا",
+          logout: "تسجيل الخروج",
+          heroTitle: "ملاذ جبلي ريفي",
+          heroDesc: "اختبر مزيجًا مثاليًا من الأناقة والراحة في ملاذنا الجبلي الريفي.",
+          features: "المميزات",
+          featuresDesc: "اهرب إلى هدوء الطبيعة مع هذا الملاذ الجبلي الريفي الساحر، حيث يلتقي التصميم الكلاسيكي بالراحة الدافئة. يحيط بك مناظر جبلية خلابة، ويتميز المنزل بديكورات خشبية دافئة ومدفأة حجرية لأمسيات مريحة ومساحات معيشة واسعة تجلب الطبيعة إلى الداخل. المطبخ الريفي الحديث مثالي للوجبات العائلية، بينما يوفر السطح الواسع مكانًا مثاليًا لمشاهدة غروب الشمس فوق القمم. كل التفاصيل مصممة لنمط حياة جبلي هادئ ومنعش.",
+          feature1: "إطلالات جبلية بانورامية خلابة",
+          feature2: "مدفأة حجرية مريحة لأمسيات الاسترخاء",
+          feature3: "مطبخ ريفي بأجهزة حديثة",
+          feature4: "ميزات صديقة للبيئة للمعيشة المستدامة",
+          contactButton: "اتصل بنا",
+          gallery: "المعرض",
+          livingRoom: "غرفة المعيشة",
+          kitchen: "المطبخ",
+          bedroom: "غرفة النوم",
+          backyard: "الفناء الخلفي",
+          price: "السعر",
+          priceValue: "$٨٥٠٬٠٠٠",
+          priceDesc: "هذا الملاذ الجبلي الريفي الجميل متاح بسعر مناسب. اتصل بنا اليوم لتجعله ملكك!",
+          testimonials: "ماذا يقول عملاؤنا",
+          testimonial1: '"هذا المنزل غيّر حياتنا العائلية. التصميم مثالي لاحتياجاتنا!"',
+          testimonial1By: "- عائلة سميث",
+          testimonial2: '"نحب وسائل الراحة الحديثة والتصميم الواسع. نوصي به بشدة!"',
+          testimonial2By: "- عائلة جونسون",
+          testimonial3: '"منزل جميل يجمع بين الأناقة والراحة. نحن سعداء للغاية!"',
+          testimonial3By: "- عائلة براون",
+          testimonial4: '"أفضل استثمار قمنا به على الإطلاق. كان الفريق متعاونًا جدًا طوال العملية!"',
+          testimonial4By: "- عائلة مارتينيز",
+          testimonial5: '"موقع مثالي، مجتمع رائع، وتصميم منزل مذهل!"',
+          testimonial5By: "- عائلة روبنسون",
+          interested: "مهتم بهذه الملكية؟",
+          contactMore: "اتصل بنا لمزيد من المعلومات أو لتحديد موعد زيارة.",
+          quickLinks: "روابط سريعة",
+          ourServices: "خدماتنا",
+          contactFooter: "اتصل بنا",
+          email: "البريد الإلكتروني: info@dreamhomes.com",
+          phone: "الهاتف: +91-9876543210"
+        },
+        he: {
+          home: "דף הבית",
+          home1: "דף הבית 1",
+          home2: "דף הבית 2",
+          about: "עלינו",
+          services: "שירותים",
+          allServices: "כל השירותים",
+          modernFamilyHome: "בית משפחתי מודרני",
+          luxuryDowntownApartment: "דירת יוקרה במרכז העיר",
+          suburbanFamilyEstate: "אחוזה משפחתית בפרברים",
+          beachfrontLuxuryVilla: "וילה יוקרתית על החוף",
+          skylinePenthouseSuite: "פנטהאוז סקייליין",
+          rusticMountainRetreat: "מקום מפלט הררי כפרי",
+          blog: "בלוג",
+          contact: "צור קשר",
+          logout: "התנתק",
+          heroTitle: "מקום מפלט הררי כפרי",
+          heroDesc: "חווה את השילוב המושלם של סגנון ונוחות במקום המפלט ההררי הכפרי שלנו.",
+          features: "מאפיינים",
+          featuresDesc: "ברח לשלוות הטבע עם מקום מפלט הררי כפרי זה, בו עיצוב על-זמני פוגש נוחות חמימה. מוקף בנופים הרריים עוצרי נשימה, הבית כולל עיצובי עץ חמימים, אח אבן לערבים רגועים, וחללי מגורים מרווחים שמכניסים את החוץ פנימה. המטבח הכפרי-מודרני מושלם לארוחות משפחתיות, והמרפסת הרחבה מציעה מקום אידיאלי לצפות בשקיעות מעל הפסגות. כל פרט נבנה לאורח חיים הררי שליו ומרענן.",
+          feature1: "נוף פנורמי הררי עוצר נשימה",
+          feature2: "אח אבן חמימה לערבים רגועים",
+          feature3: "מטבח כפרי עם מכשירים מודרניים",
+          feature4: "מאפיינים ידידותיים לסביבה לחיים ברי קיימא",
+          contactButton: "צור קשר",
+          gallery: "גלריה",
+          livingRoom: "סלון",
+          kitchen: "מטבח",
+          bedroom: "חדר שינה",
+          backyard: "חצר אחורית",
+          price: "מחיר",
+          priceValue: "$850,000",
+          priceDesc: "מקום מפלט הררי כפרי זה זמין במחיר משתלם. צרו קשר עוד היום כדי להפוך אותו לשלכם!",
+          testimonials: "מה הלקוחות שלנו אומרים",
+          testimonial1: '"הבית הזה שינה את חיי המשפחה שלנו. העיצוב מושלם לצרכים שלנו!"',
+          testimonial1By: "- משפחת סמית'",
+          testimonial2: '"אנחנו אוהבים את הנוחות המודרנית והעיצוב המרווח. ממליצים בחום!"',
+          testimonial2By: "- משפחת ג'ונסון",
+          testimonial3: '"בית יפהפה שמשלב סגנון ונוחות. אנחנו לא יכולים להיות מרוצים יותר!"',
+          testimonial3By: "- משפחת בראון",
+          testimonial4: '"ההשקעה הכי טובה שעשינו. הצוות היה כל כך עוזר לאורך כל התהליך!"',
+          testimonial4By: "- משפחת מרטינז",
+          testimonial5: '"מיקום מושלם, קהילה נהדרת, ועיצוב בית מדהים!"',
+          testimonial5By: "- משפחת רובינסון",
+          interested: "מעוניינים בנכס הזה?",
+          contactMore: "צרו קשר למידע נוסף או לתיאום ביקור.",
+          quickLinks: "קישורים מהירים",
+          ourServices: "השירותים שלנו",
+          contactFooter: "צור קשר",
+          email: "אימייל: info@dreamhomes.com",
+          phone: "טלפון: +91-9876543210"
+        }
+      };
+
+      function setLanguage(lang) {
+        // Save language to localStorage
+        localStorage.setItem('selectedLanguage', lang);
+        // Set direction
+        if (lang === 'ar' || lang === 'he') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.body.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.body.setAttribute('dir', 'ltr');
+        }
+        // Get translations
+        const t = translations[lang];
+        // Header
+        document.querySelectorAll('.nav-links > li > a')[0].textContent = t.home;
+        document.querySelectorAll('.dropdown-content')[0].children[0].querySelector('a').textContent = t.home1;
+        document.querySelectorAll('.dropdown-content')[0].children[1].querySelector('a').textContent = t.home2;
+        document.querySelectorAll('.nav-links > li > a')[1].textContent = t.about;
+        document.querySelectorAll('.nav-links > li > a')[2].textContent = t.services;
+        document.querySelectorAll('.dropdown-content')[1].children[0].querySelector('a').textContent = t.allServices;
+        document.querySelectorAll('.dropdown-content')[1].children[1].querySelector('a').textContent = t.modernFamilyHome;
+        document.querySelectorAll('.dropdown-content')[1].children[2].querySelector('a').textContent = t.luxuryDowntownApartment;
+        document.querySelectorAll('.dropdown-content')[1].children[3].querySelector('a').textContent = t.suburbanFamilyEstate;
+        document.querySelectorAll('.dropdown-content')[1].children[4].querySelector('a').textContent = t.beachfrontLuxuryVilla;
+        document.querySelectorAll('.dropdown-content')[1].children[5].querySelector('a').textContent = t.skylinePenthouseSuite;
+        document.querySelectorAll('.dropdown-content')[1].children[6].querySelector('a').textContent = t.rusticMountainRetreat;
+        document.querySelectorAll('.nav-links > li > a')[3].textContent = t.blog;
+        document.querySelectorAll('.nav-links > li > a')[4].textContent = t.contact;
+        // Logout button
+        document.getElementById('logout-btn').textContent = t.logout;
+        // Hero section
+        document.querySelector('.hero-text h1').textContent = t.heroTitle;
+        document.querySelector('.hero-text p').textContent = t.heroDesc;
+        // Features section
+        document.querySelector('.features-content h2').textContent = t.features;
+        document.querySelector('.features-content p').textContent = t.featuresDesc;
+        document.querySelectorAll('.features-content ul li')[0].innerHTML = '<i class="fas fa-check-circle"></i> ' + t.feature1;
+        document.querySelectorAll('.features-content ul li')[1].innerHTML = '<i class="fas fa-check-circle"></i> ' + t.feature2;
+        document.querySelectorAll('.features-content ul li')[2].innerHTML = '<i class="fas fa-check-circle"></i> ' + t.feature3;
+        document.querySelectorAll('.features-content ul li')[3].innerHTML = '<i class="fas fa-check-circle"></i> ' + t.feature4;
+        document.querySelector('.contact-button').textContent = t.contactButton;
+        // Gallery section
+        document.querySelector('.gallery-section h2').textContent = t.gallery;
+        const galleryDivs = document.querySelectorAll('.gallery-container > div');
+        galleryDivs[0].setAttribute('data-title', t.livingRoom);
+        galleryDivs[0].querySelector('img').setAttribute('alt', t.livingRoom);
+        galleryDivs[1].setAttribute('data-title', t.kitchen);
+        galleryDivs[1].querySelector('img').setAttribute('alt', t.kitchen);
+        galleryDivs[2].setAttribute('data-title', t.bedroom);
+        galleryDivs[2].querySelector('img').setAttribute('alt', t.bedroom);
+        galleryDivs[3].setAttribute('data-title', t.backyard);
+        galleryDivs[3].querySelector('img').setAttribute('alt', t.backyard);
+        // Price section
+        document.querySelector('.price-tag-section h2').textContent = t.price;
+        document.querySelector('.price').textContent = t.priceValue;
+        document.querySelector('.price-description').textContent = t.priceDesc;
+        // Testimonials
+        document.querySelector('.testimonials-section h2').textContent = t.testimonials;
+        document.querySelectorAll('.testimonial p')[0].textContent = t.testimonial1;
+        document.querySelectorAll('.testimonial span')[0].textContent = t.testimonial1By;
+        document.querySelectorAll('.testimonial p')[1].textContent = t.testimonial2;
+        document.querySelectorAll('.testimonial span')[1].textContent = t.testimonial2By;
+        document.querySelectorAll('.testimonial p')[2].textContent = t.testimonial3;
+        document.querySelectorAll('.testimonial span')[2].textContent = t.testimonial3By;
+        document.querySelectorAll('.testimonial p')[3].textContent = t.testimonial4;
+        document.querySelectorAll('.testimonial span')[3].textContent = t.testimonial4By;
+        document.querySelectorAll('.testimonial p')[4].textContent = t.testimonial5;
+        document.querySelectorAll('.testimonial span')[4].textContent = t.testimonial5By;
+        // Contact section
+        document.querySelector('.contact-section h2').textContent = t.interested;
+        document.querySelector('.contact-section p').textContent = t.contactMore;
+        document.querySelectorAll('.contact-button')[1].textContent = t.contactButton;
+        // Footer
+        document.querySelector('.footer-links h3').textContent = t.quickLinks;
+        document.querySelector('.footer-links ul li:nth-child(1) a').textContent = t.home;
+        document.querySelector('.footer-links ul li:nth-child(2) a').textContent = t.home2;
+        document.querySelector('.footer-links ul li:nth-child(3) a').textContent = t.about;
+        document.querySelector('.footer-links ul li:nth-child(4) a').textContent = t.services;
+        document.querySelector('.footer-links ul li:nth-child(5) a').textContent = t.blog;
+        document.querySelector('.footer-links ul li:nth-child(6) a').textContent = t.contact;
+        document.querySelector('.footer-services h3').textContent = t.ourServices;
+        document.querySelector('.footer-services ul li:nth-child(1) a').textContent = t.modernFamilyHome;
+        document.querySelector('.footer-services ul li:nth-child(2) a').textContent = t.luxuryDowntownApartment;
+        document.querySelector('.footer-services ul li:nth-child(3) a').textContent = t.suburbanFamilyEstate;
+        document.querySelector('.footer-services ul li:nth-child(4) a').textContent = t.beachfrontLuxuryVilla;
+        document.querySelector('.footer-services ul li:nth-child(5) a').textContent = t.skylinePenthouseSuite;
+        document.querySelector('.footer-services ul li:nth-child(6) a').textContent = t.rusticMountainRetreat;
+        document.querySelector('.footer-contact h3').textContent = t.contactFooter;
+        document.querySelector('.footer-contact p:nth-child(2)').textContent = t.email;
+        document.querySelector('.footer-contact p:nth-child(3)').textContent = t.phone;
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Set language from localStorage or default to English
+        const lang = localStorage.getItem('selectedLanguage') || 'en';
+        document.getElementById('language-select').value = lang;
+        setLanguage(lang);
+        document.getElementById('language-select').addEventListener('change', function (e) {
+          setLanguage(e.target.value);
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -25,7 +289,7 @@
         <nav class="navbar" id="navbar">
           <ul class="nav-links">
             <li class="dropdown">
-              <a href="home.html">Home</a>
+              <a href="#">Home</a>
               <ul class="dropdown-content">
                 <li><a href="home.html">Home 1</a></li>
                 <li><a href="home2.html">Home 2</a></li>
@@ -70,6 +334,29 @@
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </nav>
+        <!-- Language Dropdown -->
+        <div
+          class="language-dropdown"
+          style="display: flex; align-items: center; margin-left: 1rem"
+        >
+          <select
+            id="language-select"
+            aria-label="Select Language"
+            class="nav-select"
+            style="
+              padding: 6px 12px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              font-size: 1rem;
+              color: #333;
+            "
+          >
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="he">Hebrew</option>
+          </select>
+        </div>
 
         <div class="user-login">
           <div id="user-initials" class="user-icon">GU</div>

@@ -1,197 +1,547 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Contact page</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="contact.js"></script>
+    <script defer src="style.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Real Estate Contact page</title>
-  <link rel="stylesheet" href="contact.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="contact.js"></script>
-  <script defer src="style.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+      // Translation object for all text content
+      const translations = {
+        en: {
+          home: "Home",
+          home1: "Home 1",
+          home2: "Home 2",
+          about: "About Us",
+          services: "Services",
+          allServices: "All Services",
+          modernFamilyHome: "Modern Family Home",
+          luxuryDowntownApartment: "Luxury Downtown Apartment",
+          suburbanFamilyEstate: "Suburban Family Estate",
+          beachfrontLuxuryVilla: "Beachfront Luxury Villa",
+          skylinePenthouseSuite: "Skyline Penthouse Suite",
+          rusticMountainRetreat: "Rustic Mountain Retreat",
+          blog: "Blog",
+          contact: "Contact Us",
+          logout: "Logout",
+          heroTitle: "Contact Us",
+          heroDesc: "We’re here to answer all your real estate questions.",
+          address: "Address",
+          addressValue: "123 Real Estate Avenue, Hyderabad, India",
+          email: "Email",
+          emailValue: "support@realestate.com",
+          phone: "Phone",
+          phoneValue: "+91 98765 43210",
+          officeHours: "Office Hours",
+          mondayFriday: "Monday – Friday:",
+          mondayFridayTime: "9:00 AM – 7:00 PM",
+          saturday: "Saturday:",
+          saturdayTime: "10:00 AM – 4:00 PM",
+          sunday: "Sunday:",
+          sundayClosed: "Closed",
+          sendMessage: "Send Us a Message",
+          yourName: "Your Name",
+          yourEmail: "Your Email",
+          subject: "Subject",
+          yourMessage: "Your Message",
+          sendBtn: "Send Message",
+          ourLocation: "Our Location",
+          dreamProperty: "Let’s Talk About Your Dream Property",
+          dreamDesc: "We respond quickly to messages. Let us help you find the perfect home or investment.",
+          startConversation: "Start a Conversation",
+          quickLinks: "Quick Links",
+          ourServices: "Our Services",
+          contactFooter: "Contact Us",
+          emailFooter: "Email: info@dreamhomes.com",
+          phoneFooter: "Phone: +91-9876543210"
+        },
+        ar: {
+          home: "الرئيسية",
+          home1: "الصفحة الرئيسية 1",
+          home2: "الصفحة الرئيسية 2",
+          about: "معلومات عنا",
+          services: "الخدمات",
+          allServices: "كل الخدمات",
+          modernFamilyHome: "منزل عائلي حديث",
+          luxuryDowntownApartment: "شقة فاخرة في وسط المدينة",
+          suburbanFamilyEstate: "عقار عائلي في الضواحي",
+          beachfrontLuxuryVilla: "فيلا فاخرة على الشاطئ",
+          skylinePenthouseSuite: "جناح بنتهاوس سكاي لاين",
+          rusticMountainRetreat: "ملاذ جبلي ريفي",
+          blog: "مدونة",
+          contact: "اتصل بنا",
+          logout: "تسجيل الخروج",
+          heroTitle: "اتصل بنا",
+          heroDesc: "نحن هنا للإجابة على جميع أسئلتك العقارية.",
+          address: "العنوان",
+          addressValue: "123 شارع العقارات، حيدر أباد، الهند",
+          email: "البريد الإلكتروني",
+          emailValue: "support@realestate.com",
+          phone: "الهاتف",
+          phoneValue: "+91 98765 43210",
+          officeHours: "ساعات العمل",
+          mondayFriday: "الاثنين – الجمعة:",
+          mondayFridayTime: "9:00 ص – 7:00 م",
+          saturday: "السبت:",
+          saturdayTime: "10:00 ص – 4:00 م",
+          sunday: "الأحد:",
+          sundayClosed: "مغلق",
+          sendMessage: "أرسل لنا رسالة",
+          yourName: "اسمك",
+          yourEmail: "بريدك الإلكتروني",
+          subject: "الموضوع",
+          yourMessage: "رسالتك",
+          sendBtn: "إرسال الرسالة",
+          ourLocation: "موقعنا",
+          dreamProperty: "دعنا نتحدث عن عقارك الحلم",
+          dreamDesc: "نحن نرد بسرعة على الرسائل. دعنا نساعدك في العثور على المنزل أو الاستثمار المثالي.",
+          startConversation: "ابدأ محادثة",
+          quickLinks: "روابط سريعة",
+          ourServices: "خدماتنا",
+          contactFooter: "اتصل بنا",
+          emailFooter: "البريد الإلكتروني: info@dreamhomes.com",
+          phoneFooter: "الهاتف: +91-9876543210"
+        },
+        he: {
+          home: "דף הבית",
+          home1: "דף הבית 1",
+          home2: "דף הבית 2",
+          about: "עלינו",
+          services: "שירותים",
+          allServices: "כל השירותים",
+          modernFamilyHome: "בית משפחתי מודרני",
+          luxuryDowntownApartment: "דירת יוקרה במרכז העיר",
+          suburbanFamilyEstate: "אחוזה משפחתית בפרברים",
+          beachfrontLuxuryVilla: "וילה יוקרתית על החוף",
+          skylinePenthouseSuite: "פנטהאוז סקייליין",
+          rusticMountainRetreat: "מקום מפלט הררי כפרי",
+          blog: "בלוג",
+          contact: "צור קשר",
+          logout: "התנתק",
+          heroTitle: "צור קשר",
+          heroDesc: "אנחנו כאן כדי לענות על כל שאלות הנדל\"ן שלך.",
+          address: "כתובת",
+          addressValue: "123 שדרת נדל\"ן, היידראבאד, הודו",
+          email: "אימייל",
+          emailValue: "support@realestate.com",
+          phone: "טלפון",
+          phoneValue: "+91 98765 43210",
+          officeHours: "שעות פעילות",
+          mondayFriday: "שני – שישי:",
+          mondayFridayTime: "9:00 – 19:00",
+          saturday: "שבת:",
+          saturdayTime: "10:00 – 16:00",
+          sunday: "ראשון:",
+          sundayClosed: "סגור",
+          sendMessage: "שלח לנו הודעה",
+          yourName: "השם שלך",
+          yourEmail: "האימייל שלך",
+          subject: "נושא",
+          yourMessage: "ההודעה שלך",
+          sendBtn: "שלח הודעה",
+          ourLocation: "המיקום שלנו",
+          dreamProperty: "בוא נדבר על נכס החלומות שלך",
+          dreamDesc: "אנחנו מגיבים במהירות להודעות. תן לנו לעזור לך למצוא את הבית או ההשקעה המושלמים.",
+          startConversation: "התחל שיחה",
+          quickLinks: "קישורים מהירים",
+          ourServices: "השירותים שלנו",
+          contactFooter: "צור קשר",
+          emailFooter: "אימייל: info@dreamhomes.com",
+          phoneFooter: "טלפון: +91-9876543210"
+        }
+      };
 
-</head>
+      function setLanguage(lang) {
+        // Save language to localStorage
+        localStorage.setItem('selectedLanguage', lang);
+        // Set direction
+        if (lang === 'ar' || lang === 'he') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.body.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.setAttribute('dir', 'ltr');
+          document.body.setAttribute('dir', 'ltr');
+        }
+        const t = translations[lang];
+        // Header
+        const navLinks = document.querySelectorAll('.nav-links > li > a');
+        if (navLinks.length >= 5) {
+          navLinks[0].textContent = t.home;
+          navLinks[1].textContent = t.about;
+          navLinks[2].textContent = t.services;
+          navLinks[3].textContent = t.blog;
+          navLinks[4].textContent = t.contact;
+        }
+        // Dropdowns
+        const dropdowns = document.querySelectorAll('.dropdown-content');
+        if (dropdowns.length >= 2) {
+          const homeDropdown = dropdowns[0].querySelectorAll('a');
+          if (homeDropdown.length >= 2) {
+            homeDropdown[0].textContent = t.home1;
+            homeDropdown[1].textContent = t.home2;
+          }
+          const servicesDropdown = dropdowns[1].querySelectorAll('a');
+          if (servicesDropdown.length >= 7) {
+            servicesDropdown[0].textContent = t.allServices;
+            servicesDropdown[1].textContent = t.modernFamilyHome;
+            servicesDropdown[2].textContent = t.luxuryDowntownApartment;
+            servicesDropdown[3].textContent = t.suburbanFamilyEstate;
+            servicesDropdown[4].textContent = t.beachfrontLuxuryVilla;
+            servicesDropdown[5].textContent = t.skylinePenthouseSuite;
+            servicesDropdown[6].textContent = t.rusticMountainRetreat;
+          }
+        }
+        // Logout button
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) logoutBtn.textContent = t.logout;
+        // Hero section
+        const heroH1 = document.querySelector('.hero-content h1');
+        if (heroH1) heroH1.textContent = t.heroTitle;
+        const heroP = document.querySelector('.hero-content p');
+        if (heroP) heroP.textContent = t.heroDesc;
+        // Contact details
+        const contactCards = document.querySelectorAll('.contact-info .card');
+        if (contactCards.length >= 3) {
+          contactCards[0].querySelector('h3').innerHTML = '📍 ' + t.address;
+          contactCards[0].querySelector('p').textContent = t.addressValue;
+          contactCards[1].querySelector('h3').innerHTML = '📧 ' + t.email;
+          contactCards[1].querySelector('p').textContent = t.emailValue;
+          contactCards[2].querySelector('h3').innerHTML = '📞 ' + t.phone;
+          contactCards[2].querySelector('p').textContent = t.phoneValue;
+        }
+        // Office hours
+        const officeHoursH2 = document.querySelector('.office-hours h2');
+        if (officeHoursH2) officeHoursH2.textContent = t.officeHours;
+        const officeSpans = document.querySelectorAll('.office-hours ul li span');
+        const officeLis = document.querySelectorAll('.office-hours ul li');
+        if (officeSpans.length >= 3 && officeLis.length >= 3) {
+          officeSpans[0].textContent = t.mondayFriday;
+          officeLis[0].childNodes[1].textContent = ' ' + t.mondayFridayTime;
+          officeSpans[1].textContent = t.saturday;
+          officeLis[1].childNodes[1].textContent = ' ' + t.saturdayTime;
+          officeSpans[2].textContent = t.sunday;
+          const closedLi = document.querySelector('.office-hours ul li.closed');
+          if (closedLi && closedLi.childNodes[1]) closedLi.childNodes[1].textContent = ' ' + t.sundayClosed;
+        }
+        // Contact form
+        const contactFormH2 = document.querySelector('.contact-form h2');
+        if (contactFormH2) contactFormH2.textContent = t.sendMessage;
+        const nameInput = document.querySelector('input[name="name"]');
+        if (nameInput) nameInput.setAttribute('placeholder', t.yourName);
+        const emailInput = document.querySelector('input[name="email"]');
+        if (emailInput) emailInput.setAttribute('placeholder', t.yourEmail);
+        const subjectInput = document.querySelector('input[name="subject"]');
+        if (subjectInput) subjectInput.setAttribute('placeholder', t.subject);
+        const messageTextarea = document.querySelector('textarea[name="message"]');
+        if (messageTextarea) messageTextarea.setAttribute('placeholder', t.yourMessage);
+        const sendBtn = document.querySelector('.contact-form button[type="submit"]');
+        if (sendBtn) sendBtn.textContent = t.sendBtn;
+        // Map section
+        const mapSectionH2s = document.querySelectorAll('.section .container h2');
+        if (mapSectionH2s.length > 1) mapSectionH2s[1].textContent = t.ourLocation;
+        // Dream property section
+        const dreamH2 = document.querySelector('.dream-property h2');
+        if (dreamH2) dreamH2.textContent = t.dreamProperty;
+        const dreamP = document.querySelector('.dream-property p');
+        if (dreamP) dreamP.textContent = t.dreamDesc;
+        const dreamA = document.querySelector('.dream-property a');
+        if (dreamA) dreamA.textContent = t.startConversation;
+        // Footer
+        const footerLinksH3 = document.querySelector('.footer-links h3');
+        if (footerLinksH3) footerLinksH3.textContent = t.quickLinks;
+        const footerLinks = document.querySelectorAll('.footer-links ul li a');
+        if (footerLinks.length >= 6) {
+          footerLinks[0].textContent = t.home;
+          footerLinks[1].textContent = t.home2;
+          footerLinks[2].textContent = t.about;
+          footerLinks[3].textContent = t.services;
+          footerLinks[4].textContent = t.blog;
+          footerLinks[5].textContent = t.contact;
+        }
+        const footerServicesH3 = document.querySelector('.footer-services h3');
+        if (footerServicesH3) footerServicesH3.textContent = t.ourServices;
+        const footerServicesLinks = document.querySelectorAll('.footer-services ul li a');
+        if (footerServicesLinks.length >= 6) {
+          footerServicesLinks[0].textContent = t.modernFamilyHome;
+          footerServicesLinks[1].textContent = t.luxuryDowntownApartment;
+          footerServicesLinks[2].textContent = t.suburbanFamilyEstate;
+          footerServicesLinks[3].textContent = t.beachfrontLuxuryVilla;
+          footerServicesLinks[4].textContent = t.skylinePenthouseSuite;
+          footerServicesLinks[5].textContent = t.rusticMountainRetreat;
+        }
+        const footerContactH3 = document.querySelector('.footer-contact h3');
+        if (footerContactH3) footerContactH3.textContent = t.contactFooter;
+        const footerContactPs = document.querySelectorAll('.footer-contact p');
+        if (footerContactPs.length >= 2) {
+          footerContactPs[0].textContent = t.emailFooter;
+          footerContactPs[1].textContent = t.phoneFooter;
+        }
+      }
 
-<body>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Set language from localStorage or default to English
+        const lang = localStorage.getItem('selectedLanguage') || 'en';
+        document.getElementById('language-select').value = lang;
+        setLanguage(lang);
+        document.getElementById('language-select').addEventListener('change', function (e) {
+          setLanguage(e.target.value);
+        });
+      });
+    </script>
+  </head>
 
-  <!-- Header -->
-  <header class="site-header sticky">
-    <div class="header-container">
-      <div class="footer-logo">
-        <img src="logo.png" class="footer-logo-img" />
+  <body>
+    <!-- Header -->
+    <header class="site-header sticky">
+      <div class="header-container">
+        <div class="footer-logo">
+          <img src="logo.png" class="footer-logo-img" />
+        </div>
+
+        <nav class="navbar" id="navbar">
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a href="#">Home</a>
+              <ul class="dropdown-content">
+                <li><a href="home.html">Home 1</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="services.html">All Services</a></li>
+                <li>
+                  <a href="modern-family-home.html">Modern Family Home</a>
+                </li>
+                <li>
+                  <a href="luxury-downtown-apartment.html"
+                    >Luxury Downtown Apartment</a
+                  >
+                </li>
+                <li>
+                  <a href="suburban-family-estate.html"
+                    >Suburban Family Estate</a
+                  >
+                </li>
+                <li>
+                  <a href="beachfront-luxury-villa.html"
+                    >Beachfront Luxury Villa4</a
+                  >
+                </li>
+                <li>
+                  <a href="skyline-penthouse-suite.html"
+                    >Skyline Penthouse Suite</a
+                  >
+                </li>
+                <li>
+                  <a href="rustic-mountain-retreat.html"
+                    >Rustic Mountain Retreat</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <!-- Language Dropdown -->
+        <div
+          class="language-dropdown"
+          style="display: flex; align-items: center; margin-left: 1rem"
+        >
+          <select
+            id="language-select"
+            aria-label="Select Language"
+            class="nav-select"
+            style="
+              padding: 6px 12px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              font-size: 1rem;
+              color: #333;
+            "
+          >
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="he">Hebrew</option>
+          </select>
+        </div>
+
+        <div class="user-login">
+          <div id="user-initials" class="user-icon">GU</div>
+          <div id="logout-dropdown" class="logout-dropdown">
+            <button id="logout-btn">Logout</button>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger">&#9776;</div>
       </div>
+    </header>
 
-      <nav class="navbar" id="navbar">
-        <ul class="nav-links">
-          <li class="dropdown">
-            <a href="home.html">Home</a>
-            <ul class="dropdown-content">
-              <li><a href="home.html">Home 1</a></li>
-              <li><a href="home2.html">Home 2</a></li>
-            </ul>
-          </li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="#">Services</a>
-            <ul class="dropdown-content">
-              <li><a href="services.html">All Services</a></li>
-              <li><a href="modern-family-home.html">Modern Family Home</a></li>
-              <li><a href="luxury-downtown-apartment.html">Luxury Downtown Apartment</a></li>
-              <li><a href="suburban-family-estate.html">Suburban Family Estate</a></li>
-              <li><a href="beachfront-luxury-villa.html">Beachfront Luxury Villa4</a></li>
-              <li><a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a></li>
-              <li><a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
+    <!-- 1. Hero Section -->
+    <section class="hero contact-hero">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>We’re here to answer all your real estate questions.</p>
+      </div>
+    </section>
 
-      <div class="user-login">
-        <div id="user-initials" class="user-icon">GU</div>
-        <div id="logout-dropdown" class="logout-dropdown">
-          <button id="logout-btn">Logout</button>
+    <!-- 2. Contact Details -->
+    <section class="section">
+      <div class="container contact-info">
+        <div class="card">
+          <h3>📍 Address</h3>
+          <p>123 Real Estate Avenue, Hyderabad, India</p>
+        </div>
+        <div class="card">
+          <h3>📧 Email</h3>
+          <p>support@realestate.com</p>
+        </div>
+        <div class="card">
+          <h3>📞 Phone</h3>
+          <p>+91 98765 43210</p>
         </div>
       </div>
+    </section>
 
-
-      <div class="hamburger" id="hamburger">&#9776;</div>
-    </div>
-  </header>
-
-
-
-
-
-
-
-  <!-- 1. Hero Section -->
-  <section class="hero contact-hero">
-    <div class="hero-content">
-      <h1>Contact Us</h1>
-      <p>We’re here to answer all your real estate questions.</p>
-    </div>
-  </section>
-
-  <!-- 2. Contact Details -->
-  <section class="section">
-    <div class="container contact-info">
-      <div class="card">
-        <h3>📍 Address</h3>
-        <p>123 Real Estate Avenue, Hyderabad, India</p>
-      </div>
-      <div class="card">
-        <h3>📧 Email</h3>
-        <p>support@realestate.com</p>
-      </div>
-      <div class="card">
-        <h3>📞 Phone</h3>
-        <p>+91 98765 43210</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Office Hours -->
-  <div class="office-hours">
-    <div class="">
-      <h2>Office Hours</h2>
-      <ul>
-        <li><span>Monday – Friday:</span> 9:00 AM – 7:00 PM</li>
-        <li><span>Saturday:</span> 10:00 AM – 4:00 PM</li>
-        <li class="closed"><span>Sunday:</span> Closed</li>
-      </ul>
-
-    </div>
-
-  </div>
-
-
-  <!-- 4. Contact Form -->
-  <div class="contact-section" id="contactSection">
-    <div class="contact-image">
-      <img src="images/contact-hero-bg.jpg" alt="Contact Us">
-    </div>
-    <div class="contact-form">
-      <h2>Send Us a Message</h2>
-      <form id="contactForm" action="https://formspree.io/f/xovlekvg" method="POST">
-        <input type="text" placeholder="Your Name" name="name" required>
-        <input type="email" placeholder="Your Email" name="email" required>
-        <input type="text" placeholder="Subject" name="subject" required>
-        <textarea placeholder="Your Message" name="message" required></textarea>
-        <button type="submit">Send Message</button>
-        <p class="form-responce" id="form-response"></p>
-      </form>
-    </div>
-  </div>
-
-
-  <!-- 5. Google Map -->
-  <section class="section">
-    <div class="container">
-      <h2>Our Location</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0371597779116!2d78.48723381487718!3d17.438606805659302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973c8f1e2a8f%3A0xb9c34652d18e10f0!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1621100919163!5m2!1sen!2sin"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. Call to Action -->
-  <div class="dream-property">
-    <h2>Let’s Talk About Your Dream Property</h2>
-    <p>We respond quickly to messages. Let us help you find the perfect home or investment.</p>
-    <a href="#contactSection" class="btn-start">Start a Conversation</a>
-  </div>
-
-
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="logo.png" class="footer-logo-img" />
-      </div>
-
-      <div class="footer-links">
-        <h3>Quick Links</h3>
+    <!-- 3. Office Hours -->
+    <div class="office-hours">
+      <div class="">
+        <h2>Office Hours</h2>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><span>Monday – Friday:</span> 9:00 AM – 7:00 PM</li>
+          <li><span>Saturday:</span> 10:00 AM – 4:00 PM</li>
+          <li class="closed"><span>Sunday:</span> Closed</li>
         </ul>
       </div>
-      <div class="footer-services">
-        <h3>Our Services</h3>
-        <ul>
-          <li><a href="modern-family-home.html">Modern Family Home</a></li>
-          <li><a href="luxury-downtown-apartment.html">Luxury Downtown Apartment</a></li>
-          <li><a href="suburban-family-estate.html">Suburban Family Estate</a></li>
-          <li><a href="beachfront-luxury-villa.html">Beachfront Luxury Villa</a></li>
-          <li><a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a></li>
-          <li><a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a></li>
-        </ul>
+    </div>
+
+    <!-- 4. Contact Form -->
+    <div class="contact-section" id="contactSection">
+      <div class="contact-image">
+        <img src="images/contact-hero-bg.jpg" alt="Contact Us" />
       </div>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: info@dreamhomes.com</p>
-        <p>Phone: +91-9876543210</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xovlekvg"
+          method="POST"
+        >
+          <input type="text" placeholder="Your Name" name="name" required />
+          <input type="email" placeholder="Your Email" name="email" required />
+          <input type="text" placeholder="Subject" name="subject" required />
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+          <p class="form-responce" id="form-response"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- 5. Google Map -->
+    <section class="section">
+      <div class="container">
+        <h2>Our Location</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0371597779116!2d78.48723381487718!3d17.438606805659302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973c8f1e2a8f%3A0xb9c34652d18e10f0!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1621100919163!5m2!1sen!2sin"
+            width="100%"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Call to Action -->
+    <div class="dream-property">
+      <h2>Let’s Talk About Your Dream Property</h2>
+      <p>
+        We respond quickly to messages. Let us help you find the perfect home or
+        investment.
+      </p>
+      <a href="#contactSection" class="btn-start">Start a Conversation</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="logo.png" class="footer-logo-img" />
         </div>
 
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="modern-family-home.html">Modern Family Home</a></li>
+            <li>
+              <a href="luxury-downtown-apartment.html"
+                >Luxury Downtown Apartment</a
+              >
+            </li>
+            <li>
+              <a href="suburban-family-estate.html">Suburban Family Estate</a>
+            </li>
+            <li>
+              <a href="beachfront-luxury-villa.html">Beachfront Luxury Villa</a>
+            </li>
+            <li>
+              <a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a>
+            </li>
+            <li>
+              <a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@dreamhomes.com</p>
+          <p>Phone: +91-9876543210</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.whatsapp.com/"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.linkedin.com/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

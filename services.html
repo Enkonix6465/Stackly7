@@ -6,7 +6,9 @@
     <title>Services</title>
     <link rel="stylesheet" href="services.css" />
     <link rel="stylesheet" href="style.css" />
+
     <script defer src="style.js"></script>
+    
 
     <link
       rel="stylesheet"
@@ -29,7 +31,7 @@
         <nav class="navbar" id="navbar">
           <ul class="nav-links">
             <li class="dropdown">
-              <a href="home.html">Home</a>
+              <a href="#">Home</a>
               <ul class="dropdown-content">
                 <li><a href="home.html">Home 1</a></li>
                 <li><a href="home2.html">Home 2</a></li>
@@ -74,6 +76,29 @@
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </nav>
+        <!-- Language Dropdown -->
+        <div
+          class="language-dropdown"
+          style="display: flex; align-items: center; margin-left: 1rem"
+        >
+          <select
+            id="language-select"
+            aria-label="Select Language"
+            class="nav-select"
+            style="
+              padding: 6px 12px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              font-size: 1rem;
+              color: #333;
+            "
+          >
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="he">Hebrew</option>
+          </select>
+        </div>
 
         <div class="user-login">
           <div id="user-initials" class="user-icon">GU</div>
@@ -582,4 +607,448 @@
       </div>
     </footer>
   </body>
+  <script>
+      const translations = {
+        en: {
+          nav: {
+            home: "Home",
+            home1: "Home 1",
+            home2: "Home 2",
+            about: "About Us",
+            services: "Services",
+            allServices: "All Services",
+            modern: "Modern Family Home",
+            luxury: "Luxury Downtown Apartment",
+            suburban: "Suburban Family Estate",
+            beachfront: "Beachfront Luxury Villa",
+            skyline: "Skyline Penthouse Suite",
+            rustic: "Rustic Mountain Retreat",
+            blog: "Blog",
+            contact: "Contact Us",
+          },
+          hero: {
+            title: "Our Services",
+            desc: "Explore the range of services we offer to help you achieve your real estate goals.",
+          },
+          section: {
+            title: "Our Real Estate Services",
+            desc: "Comprehensive services to help you buy, sell, or rent properties with confidence",
+            buyTitle: "Property Buying",
+            buyDesc:
+              "Find your dream home with our extensive property listings and expert guidance through the buying process.",
+            sellTitle: "Property Selling",
+            sellDesc:
+              "Maximize your property value with professional staging, marketing, and negotiation services.",
+            rentTitle: "Property Rental",
+            rentDesc:
+              "Discover the perfect rental property with our curated listings and tenant management services.",
+            learnMore: "Learn More",
+          },
+          featured: {
+            title: "Featured Properties",
+            desc: "Explore our handpicked selection of premium properties",
+            forSale: "For Sale",
+            forRent: "For Rent",
+            viewDetails: "View Details",
+            beds: "Beds",
+            baths: "Baths",
+          },
+          agents: {
+            title: "Meet Our Agents",
+            desc: "Professional and experienced agents ready to assist you",
+            agent1: {
+              name: "Michael Johnson",
+              role: "Senior Real Estate Agent",
+              desc: "10+ years of experience in luxury properties and commercial real estate.",
+            },
+            agent2: {
+              name: "Sarah Williams",
+              role: "Residential Specialist",
+              desc: "Expert in first-time home buyers and family relocation services.",
+            },
+            agent3: {
+              name: "Robert Chen",
+              role: "Investment Properties",
+              desc: "Specializes in commercial properties and real estate investment portfolios.",
+            },
+          },
+          footer: {
+            quickLinks: "Quick Links",
+            contact: "Contact Us",
+            ourServices: "Our Services",
+            email: "Email: info@dreamhomes.com",
+            phone: "Phone: +91-9876543210",
+          },
+        },
+        ar: {
+          nav: {
+            home: "الرئيسية",
+            home1: "الصفحة الرئيسية 1",
+            home2: "الصفحة الرئيسية 2",
+            about: "معلومات عنا",
+            services: "الخدمات",
+            allServices: "كل الخدمات",
+            modern: "منزل عائلي حديث",
+            luxury: "شقة فاخرة وسط المدينة",
+            suburban: "عقار عائلي في الضواحي",
+            beachfront: "فيلا فاخرة على الشاطئ",
+            skyline: "جناح بنتهاوس سكاي لاين",
+            rustic: "ملاذ جبلي ريفي",
+            blog: "مدونة",
+            contact: "اتصل بنا",
+          },
+          hero: {
+            title: "خدماتنا",
+            desc: "استكشف مجموعة الخدمات التي نقدمها لمساعدتك في تحقيق أهدافك العقارية.",
+          },
+          section: {
+            title: "خدماتنا العقارية",
+            desc: "خدمات شاملة لمساعدتك في شراء أو بيع أو استئجار العقارات بثقة",
+            buyTitle: "شراء العقارات",
+            buyDesc:
+              "اعثر على منزل أحلامك مع قوائمنا الواسعة وإرشاداتنا الخبيرة خلال عملية الشراء.",
+            sellTitle: "بيع العقارات",
+            sellDesc:
+              "حقق أقصى قيمة لعقارك مع خدمات الترتيب والتسويق والتفاوض الاحترافية.",
+            rentTitle: "تأجير العقارات",
+            rentDesc:
+              "اكتشف العقار المثالي للإيجار مع قوائمنا المختارة وخدمات إدارة المستأجرين.",
+            learnMore: "اعرف المزيد",
+          },
+          featured: {
+            title: "العقارات المميزة",
+            desc: "استكشف مجموعتنا المختارة من العقارات الفاخرة",
+            forSale: "للبيع",
+            forRent: "للإيجار",
+            viewDetails: "عرض التفاصيل",
+            beds: "غرف نوم",
+            baths: "حمامات",
+          },
+          agents: {
+            title: "تعرف على وكلائنا",
+            desc: "وكلاء محترفون وذوو خبرة جاهزون لمساعدتك",
+            agent1: {
+              name: "مايكل جونسون",
+              role: "وكيل عقارات أول",
+              desc: "أكثر من 10 سنوات خبرة في العقارات الفاخرة والتجارية.",
+            },
+            agent2: {
+              name: "سارة ويليامز",
+              role: "متخصصة سكنية",
+              desc: "خبيرة في المشترين لأول مرة وخدمات نقل العائلات.",
+            },
+            agent3: {
+              name: "روبرت تشين",
+              role: "استثمارات عقارية",
+              desc: "متخصص في العقارات التجارية ومحافظ الاستثمار العقاري.",
+            },
+          },
+          footer: {
+            quickLinks: "روابط سريعة",
+            contact: "اتصل بنا",
+            ourServices: "خدماتنا",
+            email: "البريد الإلكتروني: info@dreamhomes.com",
+            phone: "الهاتف: +91-9876543210",
+          },
+        },
+        he: {
+          nav: {
+            home: "דף הבית",
+            home1: "דף הבית 1",
+            home2: "דף הבית 2",
+            about: "אודותינו",
+            services: "שירותים",
+            allServices: "כל השירותים",
+            modern: "בית משפחתי מודרני",
+            luxury: "דירת יוקרה במרכז העיר",
+            suburban: "אחוזת משפחה בפרברים",
+            beachfront: "וילה יוקרתית על החוף",
+            skyline: "פנטהאוז סקייליין",
+            rustic: "מקום מפלט הררי כפרי",
+            blog: "בלוג",
+            contact: "צור קשר",
+          },
+          hero: {
+            title: "השירותים שלנו",
+            desc: 'גלה את מגוון השירותים שאנו מציעים כדי לעזור לך להשיג את מטרות הנדל"ן שלך.',
+          },
+          section: {
+            title: 'שירותי הנדל"ן שלנו',
+            desc: "שירותים מקיפים שיעזרו לך לקנות, למכור או לשכור נכסים בביטחון",
+            buyTitle: "רכישת נכס",
+            buyDesc:
+              "מצא את בית חלומותיך עם רשימות הנכסים הנרחבות שלנו והכוונה מקצועית לאורך כל תהליך הרכישה.",
+            sellTitle: "מכירת נכס",
+            sellDesc:
+              "מקסם את ערך הנכס שלך עם שירותי סטייג'ינג, שיווק ומשא ומתן מקצועיים.",
+            rentTitle: "השכרת נכס",
+            rentDesc:
+              "גלה את הנכס המושלם להשכרה עם רשימות נבחרות ושירותי ניהול דיירים.",
+            learnMore: "למידע נוסף",
+          },
+          featured: {
+            title: "נכסים נבחרים",
+            desc: "גלה את מבחר הנכסים היוקרתיים שלנו",
+            forSale: "למכירה",
+            forRent: "להשכרה",
+            viewDetails: "צפה בפרטים",
+            beds: "חדרי שינה",
+            baths: "חדרי רחצה",
+          },
+          agents: {
+            title: "הכירו את הסוכנים שלנו",
+            desc: "סוכנים מקצועיים ומנוסים מוכנים לעזור לך",
+            agent1: {
+              name: "מייקל ג'ונסון",
+              role: 'סוכן נדל"ן בכיר',
+              desc: 'מעל 10 שנות ניסיון בנכסים יוקרתיים ונדל"ן מסחרי.',
+            },
+            agent2: {
+              name: "שרה ויליאמס",
+              role: "מומחית מגורים",
+              desc: "מומחית לרוכשים בפעם הראשונה ושירותי מעבר למשפחות.",
+            },
+            agent3: {
+              name: "רוברט צ'ן",
+              role: 'השקעות נדל"ן',
+              desc: 'מתמחה בנכסים מסחריים ותיקי השקעות נדל"ן.',
+            },
+          },
+          footer: {
+            quickLinks: "קישורים מהירים",
+            contact: "צור קשר",
+            ourServices: "השירותים שלנו",
+            email: "אימייל: info@dreamhomes.com",
+            phone: "טלפון: +91-9876543210",
+          },
+        },
+      };
+
+      function setLanguage(lang) {
+        // Set dir for Arabic/Hebrew
+        if (lang === "ar" || lang === "he") {
+          document.body.setAttribute("dir", "rtl");
+        } else {
+          document.body.setAttribute("dir", "ltr");
+        }
+        const t = translations[lang];
+        // Header
+        document.querySelectorAll(".nav-links > li > a")[0].textContent =
+          t.nav.home;
+        document
+          .querySelectorAll(".dropdown-content")[0]
+          .children[0].querySelector("a").textContent = t.nav.home1;
+        document
+          .querySelectorAll(".dropdown-content")[0]
+          .children[1].querySelector("a").textContent = t.nav.home2;
+        document.querySelectorAll(".nav-links > li > a")[1].textContent =
+          t.nav.about;
+        document.querySelectorAll(".nav-links > li > a")[2].textContent =
+          t.nav.services;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[0].querySelector("a").textContent = t.nav.allServices;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[1].querySelector("a").textContent = t.nav.modern;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[2].querySelector("a").textContent = t.nav.luxury;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[3].querySelector("a").textContent = t.nav.suburban;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[4].querySelector("a").textContent = t.nav.beachfront;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[5].querySelector("a").textContent = t.nav.skyline;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[6].querySelector("a").textContent = t.nav.rustic;
+        document.querySelectorAll(".nav-links > li > a")[3].textContent =
+          t.nav.blog;
+        document.querySelectorAll(".nav-links > li > a")[4].textContent =
+          t.nav.contact;
+
+        // Hero
+        document.querySelector(".hero-text h1").textContent = t.hero.title;
+        document.querySelector(".hero-text p").textContent = t.hero.desc;
+
+        // Services Section
+        document.querySelectorAll(".section-header h2")[0].textContent =
+          t.section.title;
+        document.querySelectorAll(".section-header p")[0].textContent =
+          t.section.desc;
+        document.querySelectorAll(".service-content h3")[0].textContent =
+          t.section.buyTitle;
+        document.querySelectorAll(".service-content p")[0].textContent =
+          t.section.buyDesc;
+        document.querySelectorAll(".service-content a")[0].textContent =
+          t.section.learnMore;
+        document.querySelectorAll(".service-content h3")[1].textContent =
+          t.section.sellTitle;
+        document.querySelectorAll(".service-content p")[1].textContent =
+          t.section.sellDesc;
+        document.querySelectorAll(".service-content a")[1].textContent =
+          t.section.learnMore;
+        document.querySelectorAll(".service-content h3")[2].textContent =
+          t.section.rentTitle;
+        document.querySelectorAll(".service-content p")[2].textContent =
+          t.section.rentDesc;
+        document.querySelectorAll(".service-content a")[2].textContent =
+          t.section.learnMore;
+
+        // Featured Properties
+        document.querySelectorAll(".section-header h2")[1].textContent =
+          t.featured.title;
+        document.querySelectorAll(".section-header p")[1].textContent =
+          t.featured.desc;
+        const statuses = [
+          t.featured.forSale,
+          t.featured.forRent,
+          t.featured.forSale,
+          t.featured.forSale,
+          t.featured.forRent,
+          t.featured.forSale,
+        ];
+        document
+          .querySelectorAll(".property-status")
+          .forEach((el, i) => (el.textContent = statuses[i]));
+        const prices = [
+          "$425,000",
+          "$3,200/mo",
+          "$685,000",
+          "$1,250,000",
+          "$7,500/mo",
+          "$850,000",
+        ];
+        document
+          .querySelectorAll(".property-price")
+          .forEach((el, i) => (el.textContent = prices[i]));
+        const propertyTitles = [
+          t.nav.modern,
+          t.nav.luxury,
+          t.nav.suburban,
+          t.nav.beachfront,
+          t.nav.skyline,
+          t.nav.rustic,
+        ];
+        document
+          .querySelectorAll(".property-content h3")
+          .forEach((el, i) => (el.textContent = propertyTitles[i]));
+        const propertyAddresses = [
+          "123 Park Avenue, New York",
+          "456 Downtown Blvd, Chicago",
+          "789 Oak Street, Boston",
+          "25 Ocean Drive, Miami",
+          "88 Highrise Ave, Los Angeles",
+          "14 Pine Ridge, Aspen",
+        ];
+        document
+          .querySelectorAll(".property-address span")
+          .forEach((el, i) => (el.textContent = propertyAddresses[i]));
+        const propertyDescs = [
+          "Beautiful modern home with spacious rooms, large backyard and stunning city views.",
+          "Stunning luxury apartment with panoramic city views and premium amenities in the heart of downtown.",
+          "Spacious family home in a quiet neighborhood with large garden and modern interior design.",
+          "Elegant villa with private beach access, infinity pool, and panoramic sea views.",
+          "Exclusive penthouse with rooftop terrace, private elevator, and breathtaking skyline views.",
+          "Cozy yet luxurious cabin nestled in the mountains, perfect for winter getaways and summer hikes.",
+        ];
+        document
+          .querySelectorAll(".property-content p")
+          .forEach((el, i) => (el.textContent = propertyDescs[i]));
+        const beds = ["4", "2", "5", "5", "3", "4"];
+        const baths = ["3", "2", "4", "5", "3", "3"];
+        const areas = [
+          "2,150 sq.ft.",
+          "1,200 sq.ft.",
+          "3,400 sq.ft.",
+          "4,000 sq.ft.",
+          "2,800 sq.ft.",
+          "2,500 sq.ft.",
+        ];
+        document.querySelectorAll(".feature").forEach((el, i) => {
+          if (i % 3 === 0)
+            el.querySelector("span").textContent =
+              beds[Math.floor(i / 3)] + " " + t.featured.beds;
+          if (i % 3 === 1)
+            el.querySelector("span").textContent =
+              baths[Math.floor(i / 3)] + " " + t.featured.baths;
+          if (i % 3 === 2)
+            el.querySelector("span").textContent = areas[Math.floor(i / 3)];
+        });
+        document
+          .querySelectorAll(".property-content a.btn-primary")
+          .forEach((el) => (el.textContent = t.featured.viewDetails));
+
+        // Agents Section
+        document.querySelectorAll(".section-header h2")[2].textContent =
+          t.agents.title;
+        document.querySelectorAll(".section-header p")[2].textContent =
+          t.agents.desc;
+        document.querySelectorAll(".agent-card h3")[0].textContent =
+          t.agents.agent1.name;
+        document.querySelectorAll(".agent-role")[0].textContent =
+          t.agents.agent1.role;
+        document.querySelectorAll(".agent-card p")[0].textContent =
+          t.agents.agent1.desc;
+        document.querySelectorAll(".agent-card h3")[1].textContent =
+          t.agents.agent2.name;
+        document.querySelectorAll(".agent-role")[1].textContent =
+          t.agents.agent2.role;
+        document.querySelectorAll(".agent-card p")[1].textContent =
+          t.agents.agent2.desc;
+        document.querySelectorAll(".agent-card h3")[2].textContent =
+          t.agents.agent3.name;
+        document.querySelectorAll(".agent-role")[2].textContent =
+          t.agents.agent3.role;
+        document.querySelectorAll(".agent-card p")[2].textContent =
+          t.agents.agent3.desc;
+
+        // Footer
+        document.querySelector(".footer-links h3").textContent =
+          t.footer.quickLinks;
+        document.querySelector(".footer-services h3").textContent =
+          t.footer.ourServices;
+        document.querySelector(".footer-contact h3").textContent =
+          t.footer.contact;
+        document.querySelector(".footer-contact p:nth-of-type(1)").textContent =
+          t.footer.email;
+        document.querySelector(".footer-contact p:nth-of-type(2)").textContent =
+          t.footer.phone;
+        // Footer links
+        const footerLinks = [
+          t.nav.home,
+          t.nav.home2,
+          t.nav.about,
+          t.nav.services,
+          t.nav.blog,
+          t.nav.contact,
+        ];
+        document
+          .querySelectorAll(".footer-links ul li a")
+          .forEach((el, i) => (el.textContent = footerLinks[i]));
+        const footerServiceLinks = [
+          t.nav.modern,
+          t.nav.luxury,
+          t.nav.suburban,
+          t.nav.beachfront,
+          t.nav.skyline,
+          t.nav.rustic,
+        ];
+        document
+          .querySelectorAll(".footer-services ul li a")
+          .forEach((el, i) => (el.textContent = footerServiceLinks[i]));
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const select = document.getElementById("language-select");
+        setLanguage(select.value);
+        select.addEventListener("change", function () {
+          setLanguage(this.value);
+        });
+      });
+    </script>
 </html>

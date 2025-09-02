@@ -1,12 +1,12 @@
 // script.js
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navbar = document.getElementById("navbar");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const hamburger = document.getElementById("hamburger");
+//     const navbar = document.getElementById("navbar");
   
-    hamburger.addEventListener("click", () => {
-      navbar.classList.toggle("active");
-    });
-  });
+//     hamburger.addEventListener("click", () => {
+//       navbar.classList.toggle("active");
+//     });
+//   });
   document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");
     const navbar = document.getElementById("navbar");

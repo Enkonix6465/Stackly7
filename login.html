@@ -1,33 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login_The_Stackly_Dightal_Marketing</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="form-section">
-            <h1>Welcome Back</h1>
-            <p>Login to your account</p>
-            <form id="loginForm">
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <p class="register-link">Don't have an account? <a href="register.html">Register</a></p>
-            </form>
-        </div>
-        <div class="image-section">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Digital Marketing">
-        </div>
+      <div class="form-section">
+        <h1>Welcome Back</h1>
+        <p>Login to your account</p>
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p class="register-link">
+            Don't have an account? <a href="register.html">Register</a>
+          </p>
+        </form>
+      </div>
+      <div class="image-section">
+        <img
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80"
+          alt="Digital Marketing"
+        />
+      </div>
+      <div
+        class="language-dropdown"
+        style="
+          display: flex;
+          align-items: center;
+          margin-left: 1rem;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        "
+      >
+        <select
+          id="language-select"
+          aria-label="Select Language"
+          class="nav-select"
+          style="
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 1rem;
+            color: #333;
+          "
+        >
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
     </div>
+    <script>
+      // Translation object for all text content
+      const translations = {
+        en: {
+          welcome: "Welcome Back",
+          loginToAccount: "Login to your account",
+          emailLabel: "Email",
+          emailPlaceholder: "Enter your email",
+          passwordLabel: "Password",
+          passwordPlaceholder: "Enter your password",
+          loginBtn: "Login",
+          dontHaveAccount: "Don't have an account?",
+          register: "Register",
+        },
+        ar: {
+          welcome: "مرحبًا بعودتك",
+          loginToAccount: "سجّل الدخول إلى حسابك",
+          emailLabel: "البريد الإلكتروني",
+          emailPlaceholder: "أدخل بريدك الإلكتروني",
+          passwordLabel: "كلمة المرور",
+          passwordPlaceholder: "أدخل كلمة المرور",
+          loginBtn: "تسجيل الدخول",
+          dontHaveAccount: "ليس لديك حساب؟",
+          register: "سجّل",
+        },
+        he: {
+          welcome: "ברוך שובך",
+          loginToAccount: "התחבר לחשבונך",
+          emailLabel: "אימייל",
+          emailPlaceholder: "הזן את האימייל שלך",
+          passwordLabel: "סיסמה",
+          passwordPlaceholder: "הזן את הסיסמה שלך",
+          loginBtn: "התחבר",
+          dontHaveAccount: "אין לך חשבון?",
+          register: "הירשם",
+        },
+      };
+
+      function setLanguage(lang) {
+        // Save language to localStorage
+        localStorage.setItem("selectedLanguage", lang);
+        // Set direction
+        if (lang === "ar" || lang === "he") {
+          document.documentElement.setAttribute("dir", "rtl");
+          document.body.setAttribute("dir", "rtl");
+        } else {
+          document.documentElement.setAttribute("dir", "ltr");
+          document.body.setAttribute("dir", "ltr");
+        }
+        const t = translations[lang];
+        // Main content
+        const h1 = document.querySelector(".form-section h1");
+        if (h1) h1.textContent = t.welcome;
+        const p = document.querySelector(".form-section p");
+        if (p) p.textContent = t.loginToAccount;
+        const emailLabel = document.querySelector('label[for="email"]');
+        if (emailLabel) emailLabel.textContent = t.emailLabel;
+        const emailInput = document.getElementById("email");
+        if (emailInput)
+          emailInput.setAttribute("placeholder", t.emailPlaceholder);
+        const passwordLabel = document.querySelector('label[for="password"]');
+        if (passwordLabel) passwordLabel.textContent = t.passwordLabel;
+        const passwordInput = document.getElementById("password");
+        if (passwordInput)
+          passwordInput.setAttribute("placeholder", t.passwordPlaceholder);
+        const loginBtn = document.querySelector('button[type="submit"]');
+        if (loginBtn) loginBtn.textContent = t.loginBtn;
+        const regP = document.querySelector(".register-link");
+        if (regP) {
+          // Only replace the text, not the link
+          const regA = regP.querySelector("a");
+          regP.childNodes[0].textContent = t.dontHaveAccount + " ";
+          if (regA) regA.textContent = t.register;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set language from localStorage or default to English
+        const lang = localStorage.getItem("selectedLanguage") || "en";
+        document.getElementById("language-select").value = lang;
+        setLanguage(lang);
+        document
+          .getElementById("language-select")
+          .addEventListener("change", function (e) {
+            setLanguage(e.target.value);
+          });
+      });
+    </script>
     <script src="login.js"></script>
-</body>
+  </body>
 </html>

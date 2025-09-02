@@ -1,37 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register_The_Stackly_Dightal_Marketing</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
     <div class="container reverse">
-        <div class="image-section">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Register">
-        </div>
-        <div class="form-section">
-            <h1>Create Account</h1>
-            <p>Sign up to get started</p>
-            <form id="registerForm">
-                <div class="input-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="input-group">
-                    <label for="regEmail">Email</label>
-                    <input type="email" id="regEmail" placeholder="Enter your email" required>
-                </div>
-                <div class="input-group">
-                    <label for="regPassword">Password</label>
-                    <input type="password" id="regPassword" placeholder="Enter your password" required>
-                </div>
-                <button type="submit" class="btn">Register</button>
-                <p class="register-link">Already have an account? <a href="login.html">Login</a></p>
-            </form>
-        </div>
+      <div class="image-section">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+          alt="Register"
+        />
+      </div>
+      <div class="form-section">
+        <h1>Create Account</h1>
+        <p>Sign up to get started</p>
+        <form id="registerForm">
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="regEmail">Email</label>
+            <input
+              type="email"
+              id="regEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="regPassword">Password</label>
+            <input
+              type="password"
+              id="regPassword"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <p class="register-link">
+            Already have an account? <a href="login.html">Login</a>
+          </p>
+        </form>
+      </div>
+      <div
+        class="language-dropdown"
+        style="
+          display: flex;
+          align-items: center;
+          margin-left: 1rem;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        "
+      >
+        <select
+          id="language-select"
+          aria-label="Select Language"
+          class="nav-select"
+          style="
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 1rem;
+            color: #333;
+          "
+        >
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="he">Hebrew</option>
+        </select>
+      </div>
     </div>
+    <script>
+      // Translation object for all text content
+      const translations = {
+        en: {
+          createAccount: "Create Account",
+          signUp: "Sign up to get started",
+          fullNameLabel: "Full Name",
+          fullNamePlaceholder: "Enter your name",
+          emailLabel: "Email",
+          emailPlaceholder: "Enter your email",
+          passwordLabel: "Password",
+          passwordPlaceholder: "Enter your password",
+          registerBtn: "Register",
+          alreadyHaveAccount: "Already have an account?",
+          login: "Login",
+        },
+        ar: {
+          createAccount: "إنشاء حساب",
+          signUp: "سجّل للحصول على حساب جديد",
+          fullNameLabel: "الاسم الكامل",
+          fullNamePlaceholder: "أدخل اسمك",
+          emailLabel: "البريد الإلكتروني",
+          emailPlaceholder: "أدخل بريدك الإلكتروني",
+          passwordLabel: "كلمة المرور",
+          passwordPlaceholder: "أدخل كلمة المرور",
+          registerBtn: "سجّل",
+          alreadyHaveAccount: "هل لديك حساب بالفعل؟",
+          login: "تسجيل الدخول",
+        },
+        he: {
+          createAccount: "צור חשבון",
+          signUp: "הירשם כדי להתחיל",
+          fullNameLabel: "שם מלא",
+          fullNamePlaceholder: "הזן את שמך",
+          emailLabel: "אימייל",
+          emailPlaceholder: "הזן את האימייל שלך",
+          passwordLabel: "סיסמה",
+          passwordPlaceholder: "הזן את הסיסמה שלך",
+          registerBtn: "הירשם",
+          alreadyHaveAccount: "כבר יש לך חשבון?",
+          login: "התחבר",
+        },
+      };
+
+      function setLanguage(lang) {
+        // Save language to localStorage
+        localStorage.setItem("selectedLanguage", lang);
+        // Set direction
+        if (lang === "ar" || lang === "he") {
+          document.documentElement.setAttribute("dir", "rtl");
+          document.body.setAttribute("dir", "rtl");
+        } else {
+          document.documentElement.setAttribute("dir", "ltr");
+          document.body.setAttribute("dir", "ltr");
+        }
+        const t = translations[lang];
+        // Main content
+        const h1 = document.querySelector(".form-section h1");
+        if (h1) h1.textContent = t.createAccount;
+        const p = document.querySelector(".form-section p");
+        if (p) p.textContent = t.signUp;
+        const nameLabel = document.querySelector('label[for="name"]');
+        if (nameLabel) nameLabel.textContent = t.fullNameLabel;
+        const nameInput = document.getElementById("name");
+        if (nameInput)
+          nameInput.setAttribute("placeholder", t.fullNamePlaceholder);
+        const emailLabel = document.querySelector('label[for="regEmail"]');
+        if (emailLabel) emailLabel.textContent = t.emailLabel;
+        const emailInput = document.getElementById("regEmail");
+        if (emailInput)
+          emailInput.setAttribute("placeholder", t.emailPlaceholder);
+        const passwordLabel = document.querySelector(
+          'label[for="regPassword"]'
+        );
+        if (passwordLabel) passwordLabel.textContent = t.passwordLabel;
+        const passwordInput = document.getElementById("regPassword");
+        if (passwordInput)
+          passwordInput.setAttribute("placeholder", t.passwordPlaceholder);
+        const registerBtn = document.querySelector('button[type="submit"]');
+        if (registerBtn) registerBtn.textContent = t.registerBtn;
+        const regP = document.querySelector(".register-link");
+        if (regP) {
+          // Only replace the text, not the link
+          const regA = regP.querySelector("a");
+          regP.childNodes[0].textContent = t.alreadyHaveAccount + " ";
+          if (regA) regA.textContent = t.login;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set language from localStorage or default to English
+        const lang = localStorage.getItem("selectedLanguage") || "en";
+        document.getElementById("language-select").value = lang;
+        setLanguage(lang);
+        document
+          .getElementById("language-select")
+          .addEventListener("change", function (e) {
+            setLanguage(e.target.value);
+          });
+      });
+    </script>
     <script src="register.js"></script>
-</body>
+  </body>
 </html>

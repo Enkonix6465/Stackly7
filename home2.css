@@ -131,6 +131,8 @@
   .amenity {
     background: #222;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, background 0.3s ease;

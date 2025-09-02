@@ -25,7 +25,7 @@
         <nav class="navbar" id="navbar">
           <ul class="nav-links">
             <li class="dropdown">
-              <a href="home.html">Home</a>
+              <a href="#">Home</a>
               <ul class="dropdown-content">
                 <li><a href="home.html">Home 1</a></li>
                 <li><a href="home2.html">Home 2</a></li>
@@ -70,6 +70,29 @@
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </nav>
+        <!-- Language Dropdown -->
+        <div
+          class="language-dropdown"
+          style="display: flex; align-items: center; margin-left: 1rem"
+        >
+          <select
+            id="language-select"
+            aria-label="Select Language"
+            class="nav-select"
+            style="
+              padding: 6px 12px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              font-size: 1rem;
+              color: #333;
+            "
+          >
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="he">Hebrew</option>
+          </select>
+        </div>
 
         <div class="user-login">
           <div id="user-initials" class="user-icon">GU</div>
@@ -289,5 +312,402 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Translation object and language switching logic
+      const translations = {
+        en: {
+          nav: {
+            home: "Home",
+            home1: "Home 1",
+            home2: "Home 2",
+            about: "About Us",
+            services: "Services",
+            allServices: "All Services",
+            modern: "Modern Family Home",
+            luxury: "Luxury Downtown Apartment",
+            suburban: "Suburban Family Estate",
+            beachfront: "Beachfront Luxury Villa",
+            skyline: "Skyline Penthouse Suite",
+            rustic: "Rustic Mountain Retreat",
+            blog: "Blog",
+            contact: "Contact Us",
+          },
+          hero: {
+            title: "Suburban Family Estate",
+            desc: "Spacious family home in a quiet neighborhood with large garden and modern interior design.",
+          },
+          features: {
+            title: "Features",
+            desc: "Discover a home that blends style, comfort, and practicality in every corner. From its spacious living areas designed for relaxation to a sleek open-concept kitchen perfect for culinary adventures, every detail has been thoughtfully crafted. Step outside into a generous backyard ideal for family gatherings and outdoor fun, all while enjoying the benefits of an energy-efficient design that supports sustainable living.",
+            list: [
+              "Spacious living area with modern amenities",
+              "Open-concept kitchen with high-end appliances",
+              "Large backyard perfect for family gatherings",
+              "Energy-efficient design for sustainable living",
+            ],
+            contact: "Contact Us",
+          },
+          gallery: {
+            title: "Gallery",
+            items: ["Living Room", "Kitchen", "Bedroom", "Backyard"],
+          },
+          price: {
+            title: "Price",
+            value: "$685,000",
+            desc: "This beautiful suburban family estate is available at an affordable price. Contact us today to make it yours!",
+          },
+          testimonials: {
+            title: "What Our Clients Say",
+            items: [
+              {
+                text: '"This home has transformed our family life. The design is perfect for our needs!"',
+                author: "- The Smith Family",
+              },
+              {
+                text: '"We love the modern amenities and the spacious layout. Highly recommend!"',
+                author: "- The Johnsons",
+              },
+              {
+                text: '"A beautiful home that combines style and comfort. We couldn\'t be happier!"',
+                author: "- The Browns",
+              },
+              {
+                text: '"Best investment we\'ve ever made. The team was so helpful during the entire process!"',
+                author: "- The Martinez Family",
+              },
+              {
+                text: '"Perfect location, great community, and amazing house design!"',
+                author: "- The Robinsons",
+              },
+            ],
+          },
+          contactSection: {
+            title: "Interested in this property?",
+            desc: "Contact us for more information or to schedule a visit.",
+            contact: "Contact Us",
+          },
+          footer: {
+            quickLinks: "Quick Links",
+            contact: "Contact Us",
+            ourServices: "Our Services",
+            email: "Email: info@dreamhomes.com",
+            phone: "Phone: +91-9876543210",
+          },
+        },
+        ar: {
+          nav: {
+            home: "الرئيسية",
+            home1: "الصفحة الرئيسية 1",
+            home2: "الصفحة الرئيسية 2",
+            about: "معلومات عنا",
+            services: "الخدمات",
+            allServices: "كل الخدمات",
+            modern: "منزل عائلي حديث",
+            luxury: "شقة فاخرة وسط المدينة",
+            suburban: "عقار عائلي في الضواحي",
+            beachfront: "فيلا فاخرة على الشاطئ",
+            skyline: "جناح بنتهاوس سكاي لاين",
+            rustic: "ملاذ جبلي ريفي",
+            blog: "مدونة",
+            contact: "اتصل بنا",
+          },
+          hero: {
+            title: "عقار عائلي في الضواحي",
+            desc: "منزل عائلي واسع في حي هادئ مع حديقة كبيرة وتصميم داخلي حديث.",
+          },
+          features: {
+            title: "المميزات",
+            desc: "اكتشف منزلًا يجمع بين الأناقة والراحة والعملية في كل زاوية. من مناطق المعيشة الواسعة المصممة للاسترخاء إلى مطبخ مفتوح أنيق مثالي للمغامرات الطهوية، تم التفكير في كل التفاصيل بعناية. اخرج إلى الفناء الخلفي الواسع المثالي لتجمعات العائلة والمرح في الهواء الطلق، مع الاستمتاع بفوائد التصميم الموفر للطاقة الذي يدعم الحياة المستدامة.",
+            list: [
+              "منطقة معيشة واسعة مع وسائل راحة حديثة",
+              "مطبخ مفتوح مع أجهزة عالية الجودة",
+              "فناء خلفي كبير مثالي لتجمعات العائلة",
+              "تصميم موفر للطاقة للمعيشة المستدامة",
+            ],
+            contact: "اتصل بنا",
+          },
+          gallery: {
+            title: "المعرض",
+            items: ["غرفة المعيشة", "المطبخ", "غرفة النوم", "الساحة الخلفية"],
+          },
+          price: {
+            title: "السعر",
+            value: "$685,000",
+            desc: "هذا العقار العائلي الجميل متاح بسعر مناسب. اتصل بنا اليوم لتجعله ملكك!",
+          },
+          testimonials: {
+            title: "ماذا يقول عملاؤنا",
+            items: [
+              {
+                text: '"هذا المنزل غيّر حياتنا العائلية. التصميم مثالي لاحتياجاتنا!"',
+                author: "- عائلة سميث",
+              },
+              {
+                text: '"نحب وسائل الراحة الحديثة والتصميم الواسع. نوصي به بشدة!"',
+                author: "- عائلة جونسون",
+              },
+              {
+                text: '"منزل جميل يجمع بين الأناقة والراحة. لا يمكن أن نكون أكثر سعادة!"',
+                author: "- عائلة براون",
+              },
+              {
+                text: '"أفضل استثمار قمنا به على الإطلاق. كان الفريق متعاونًا للغاية طوال العملية!"',
+                author: "- عائلة مارتينيز",
+              },
+              {
+                text: '"موقع مثالي، مجتمع رائع، وتصميم منزل مذهل!"',
+                author: "- عائلة روبنسون",
+              },
+            ],
+          },
+          contactSection: {
+            title: "مهتم بهذا العقار؟",
+            desc: "اتصل بنا لمزيد من المعلومات أو لتحديد موعد زيارة.",
+            contact: "اتصل بنا",
+          },
+          footer: {
+            quickLinks: "روابط سريعة",
+            contact: "اتصل بنا",
+            ourServices: "خدماتنا",
+            email: "البريد الإلكتروني: info@dreamhomes.com",
+            phone: "الهاتف: +91-9876543210",
+          },
+        },
+        he: {
+          nav: {
+            home: "דף הבית",
+            home1: "דף הבית 1",
+            home2: "דף הבית 2",
+            about: "אודותינו",
+            services: "שירותים",
+            allServices: "כל השירותים",
+            modern: "בית משפחתי מודרני",
+            luxury: "דירת יוקרה במרכז העיר",
+            suburban: "אחוזת משפחה בפרברים",
+            beachfront: "וילה יוקרתית על החוף",
+            skyline: "פנטהאוז סקייליין",
+            rustic: "מקום מפלט הררי כפרי",
+            blog: "בלוג",
+            contact: "צור קשר",
+          },
+          hero: {
+            title: "אחוזת משפחה בפרברים",
+            desc: "בית משפחתי מרווח בשכונה שקטה עם גינה גדולה ועיצוב פנים מודרני.",
+          },
+          features: {
+            title: "מאפיינים",
+            desc: "גלה בית שמשלב סגנון, נוחות ופרקטיות בכל פינה. מאזורי מגורים מרווחים המיועדים לרגיעה ועד מטבח פתוח ואלגנטי המושלם להרפתקאות קולינריות, כל פרט תוכנן בקפידה. צא לחצר האחורית הגדולה, אידיאלית למפגשים משפחתיים וכיף בחוץ, ותהנה מהיתרונות של עיצוב חסכוני באנרגיה התומך בחיים ברי קיימא.",
+            list: [
+              "אזור מגורים מרווח עם מתקנים מודרניים",
+              "מטבח קונספט פתוח עם מכשירים איכותיים",
+              "חצר אחורית גדולה מושלמת למפגשים משפחתיים",
+              "עיצוב חסכוני באנרגיה לחיים ברי קיימא",
+            ],
+            contact: "צור קשר",
+          },
+          gallery: {
+            title: "גלריה",
+            items: ["סלון", "מטבח", "חדר שינה", "חצר אחורית"],
+          },
+          price: {
+            title: "מחיר",
+            value: "$685,000",
+            desc: "אחוזת משפחה יפהפייה זו זמינה במחיר משתלם. צרו קשר עוד היום כדי להפוך אותה לשלכם!",
+          },
+          testimonials: {
+            title: "מה הלקוחות שלנו אומרים",
+            items: [
+              {
+                text: '"הבית הזה שינה את חיי המשפחה שלנו. העיצוב מושלם לצרכים שלנו!"',
+                author: "- משפחת סמית",
+              },
+              {
+                text: '"אנחנו אוהבים את הנוחות המודרנית והעיצוב המרווח. ממליצים בחום!"',
+                author: "- משפחת ג'ונסון",
+              },
+              {
+                text: '"בית יפהפה שמשלב סגנון ונוחות. לא יכולנו להיות מאושרים יותר!"',
+                author: "- משפחת בראון",
+              },
+              {
+                text: '"ההשקעה הכי טובה שעשינו אי פעם. הצוות היה כל כך עוזר לאורך כל התהליך!"',
+                author: "- משפחת מרטינז",
+              },
+              {
+                text: '"מיקום מושלם, קהילה נהדרת, ועיצוב בית מדהים!"',
+                author: "- משפחת רובינסון",
+              },
+            ],
+          },
+          contactSection: {
+            title: "מעוניינים בנכס הזה?",
+            desc: "צרו קשר למידע נוסף או לתיאום ביקור.",
+            contact: "צור קשר",
+          },
+          footer: {
+            quickLinks: "קישורים מהירים",
+            contact: "צור קשר",
+            ourServices: "השירותים שלנו",
+            email: "אימייל: info@dreamhomes.com",
+            phone: "טלפון: +91-9876543210",
+          },
+        },
+      };
+
+      function setLanguage(lang) {
+        const t = translations[lang];
+        // RTL/LTR direction
+        if (lang === "ar" || lang === "he") {
+          document.documentElement.setAttribute("dir", "rtl");
+          document.body.setAttribute("dir", "rtl");
+        } else {
+          document.documentElement.setAttribute("dir", "ltr");
+          document.body.setAttribute("dir", "ltr");
+        }
+
+        // Header
+        document.querySelectorAll(".nav-links > li > a")[0].textContent =
+          t.nav.home;
+        document
+          .querySelectorAll(".dropdown-content")[0]
+          .children[0].querySelector("a").textContent = t.nav.home1;
+        document
+          .querySelectorAll(".dropdown-content")[0]
+          .children[1].querySelector("a").textContent = t.nav.home2;
+        document.querySelectorAll(".nav-links > li > a")[1].textContent =
+          t.nav.about;
+        document.querySelectorAll(".nav-links > li > a")[2].textContent =
+          t.nav.services;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[0].querySelector("a").textContent = t.nav.allServices;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[1].querySelector("a").textContent = t.nav.modern;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[2].querySelector("a").textContent = t.nav.luxury;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[3].querySelector("a").textContent = t.nav.suburban;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[4].querySelector("a").textContent = t.nav.beachfront;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[5].querySelector("a").textContent = t.nav.skyline;
+        document
+          .querySelectorAll(".dropdown-content")[1]
+          .children[6].querySelector("a").textContent = t.nav.rustic;
+        document.querySelectorAll(".nav-links > li > a")[3].textContent =
+          t.nav.blog;
+        document.querySelectorAll(".nav-links > li > a")[4].textContent =
+          t.nav.contact;
+
+        // Hero
+        document.querySelector(".hero-text h1").textContent = t.hero.title;
+        document.querySelector(".hero-text p").textContent = t.hero.desc;
+
+        // Features Section
+        document.querySelector(".features-content h2").textContent =
+          t.features.title;
+        document.querySelector(".features-content p").textContent =
+          t.features.desc;
+        document
+          .querySelectorAll(".features-content ul li")
+          .forEach(
+            (el, i) =>
+              (el.innerHTML =
+                '<i class="fas fa-check-circle"></i>' + t.features.list[i])
+          );
+        document.querySelector(
+          ".features-content a.contact-button"
+        ).textContent = t.features.contact;
+
+        // Gallery Section
+        document.querySelector(".gallery-section h2").textContent =
+          t.gallery.title;
+        document
+          .querySelectorAll(".gallery-container > div")
+          .forEach((el, i) =>
+            el.setAttribute("data-title", t.gallery.items[i])
+          );
+
+        // Price Tag Section
+        document.querySelector(".price-tag-section h2").textContent =
+          t.price.title;
+        document.querySelector(".price-tag-section .price").textContent =
+          t.price.value;
+        document.querySelector(
+          ".price-tag-section .price-description"
+        ).textContent = t.price.desc;
+
+        // Testimonials Section
+        document.querySelector(".testimonials-section h2").textContent =
+          t.testimonials.title;
+        document.querySelectorAll(".testimonial").forEach((el, i) => {
+          el.querySelector("p").textContent = t.testimonials.items[i].text;
+          el.querySelector("span").textContent = t.testimonials.items[i].author;
+        });
+
+        // Contact Section
+        document.querySelector(".contact-section h2").textContent =
+          t.contactSection.title;
+        document.querySelector(".contact-section p").textContent =
+          t.contactSection.desc;
+        document.querySelector(
+          ".contact-section a.contact-button"
+        ).textContent = t.contactSection.contact;
+
+        // Footer
+        document.querySelector(".footer-links h3").textContent =
+          t.footer.quickLinks;
+        document.querySelector(".footer-services h3").textContent =
+          t.footer.ourServices;
+        document.querySelector(".footer-contact h3").textContent =
+          t.footer.contact;
+        document.querySelector(".footer-contact p:nth-of-type(1)").textContent =
+          t.footer.email;
+        document.querySelector(".footer-contact p:nth-of-type(2)").textContent =
+          t.footer.phone;
+        // Footer links
+        const footerLinks = [
+          t.nav.home,
+          t.nav.home2,
+          t.nav.about,
+          t.nav.services,
+          t.nav.blog,
+          t.nav.contact,
+        ];
+        document
+          .querySelectorAll(".footer-links ul li a")
+          .forEach((el, i) => (el.textContent = footerLinks[i]));
+        const footerServiceLinks = [
+          t.nav.modern,
+          t.nav.luxury,
+          t.nav.suburban,
+          t.nav.beachfront,
+          t.nav.skyline,
+          t.nav.rustic,
+        ];
+        document
+          .querySelectorAll(".footer-services ul li a")
+          .forEach((el, i) => (el.textContent = footerServiceLinks[i]));
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const select = document.getElementById("language-select");
+        // Load language from localStorage or default to select value
+        const savedLang = localStorage.getItem("selectedLanguage");
+        if (savedLang && select.value !== savedLang) {
+          select.value = savedLang;
+        }
+        setLanguage(select.value);
+        select.addEventListener("change", function () {
+          setLanguage(this.value);
+          localStorage.setItem("selectedLanguage", this.value);
+        });
+      });
+    </script>
   </body>
 </html>

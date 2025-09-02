@@ -1,248 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Real Estate Homepage</title>
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="home.js"></script>
-  <script defer src="style.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-<body>
-
-  <!-- Header -->
-  <header class="site-header sticky">
-    <div class="header-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Homepage</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="home.js"></script>
+    <script defer src="style.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header sticky">
+      <div class="header-container">
         <div class="footer-logo">
-            <img src="logo.png" class="footer-logo-img" />
+          <img src="logo.png" class="footer-logo-img" />
         </div>
 
         <nav class="navbar" id="navbar">
-            <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="home.html">Home</a>
-                    <ul class="dropdown-content">
-                        <li><a href="home.html">Home 1</a></li>
-                        <li><a href="home2.html">Home 2</a></li>
-                    </ul>
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a href="#">Home</a>
+              <ul class="dropdown-content">
+                <li><a href="home.html">Home 1</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="services.html">All Services</a></li>
+                <li>
+                  <a href="modern-family-home.html">Modern Family Home</a>
                 </li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="#">Services</a>
-                    <ul class="dropdown-content">
-                        <li><a href="services.html">All Services</a></li>
-                        <li><a href="modern-family-home.html">Modern Family Home</a></li>
-                        <li><a href="luxury-downtown-apartment.html">Luxury Downtown Apartment</a></li>
-                        <li><a href="suburban-family-estate.html">Suburban Family Estate</a></li>
-                        <li><a href="beachfront-luxury-villa.html">Beachfront Luxury Villa4</a></li>
-                        <li><a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a></li>
-                        <li><a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a></li>
-                    </ul>
+                <li>
+                  <a href="luxury-downtown-apartment.html"
+                    >Luxury Downtown Apartment</a
+                  >
                 </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+                <li>
+                  <a href="suburban-family-estate.html"
+                    >Suburban Family Estate</a
+                  >
+                </li>
+                <li>
+                  <a href="beachfront-luxury-villa.html"
+                    >Beachfront Luxury Villa4</a
+                  >
+                </li>
+                <li>
+                  <a href="skyline-penthouse-suite.html"
+                    >Skyline Penthouse Suite</a
+                  >
+                </li>
+                <li>
+                  <a href="rustic-mountain-retreat.html"
+                    >Rustic Mountain Retreat</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </nav>
-
-        <div class="user-login">
-            <div id="user-initials" class="user-icon">GU</div>
-            <div id="logout-dropdown" class="logout-dropdown">
-                <button id="logout-btn">Logout</button>
-            </div>
+        <!-- Language Dropdown -->
+        <div
+          class="language-dropdown"
+          style="display: flex; align-items: center; margin-left: 1rem"
+        >
+          <select
+            id="language-select"
+            aria-label="Select Language"
+            class="nav-select"
+            style="
+              padding: 6px 12px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              font-size: 1rem;
+              color: #333;
+            "
+          >
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="he">Hebrew</option>
+          </select>
         </div>
 
+        <div class="user-login">
+          <div id="user-initials" class="user-icon">GU</div>
+          <div id="logout-dropdown" class="logout-dropdown">
+            <button id="logout-btn">Logout</button>
+          </div>
+        </div>
 
         <div class="hamburger" id="hamburger">&#9776;</div>
-    </div>
-</header>
-  
-<body>
+      </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <video autoplay muted loop>
-      <source src="images/video.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-text">
-      <h1>Luxury Living Awaits</h1>
-      <p>Explore premium properties designed for your lifestyle.</p>
-    </div>
-  </section>
+    <body>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <video autoplay muted loop>
+          <source src="images/video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-text">
+          <h1>Luxury Living Awaits</h1>
+          <p>Explore premium properties designed for your lifestyle.</p>
+        </div>
+      </section>
 
-  <section class="about-section" id="about">
-    <div class="about-container">
-        <div class="about-image">
+      <section class="about-section" id="about">
+        <div class="about-container">
+          <div class="about-image">
             <video autoplay muted loop playsinline>
               <source src="images/2ndvideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-          
-      <div class="about-text">
-        <h2 class="fade-in">About Us</h2>
-        <p class="fade-in">
-          We provide exceptional real estate solutions, connecting people with their dream homes, modern apartments, and smart investments.
-        </p>
-  
-        <div class="about-counts">
-          <div class="count-box fade-in">
-            <span class="count" data-target="3000">0</span>
-            <p>Sq. Ft.</p>
-          </div>
-          <div class="count-box fade-in">
-            <span class="count" data-target="4">0</span>
-            <p>Bedrooms</p>
-          </div>
-          <div class="count-box fade-in">
-            <span class="count" data-target="3">0</span>
-            <p>Bathrooms</p>
-          </div>
-          <div class="count-box fade-in">
-            <span class="count" data-target="2">0</span>
-            <p>Car Parks</p>
-          </div>
-          <div class="count-box fade-in">
-            <span class="count" data-target="2024">0</span>
-            <p>Year Built</p>
+
+          <div class="about-text">
+            <h2 class="fade-in">About Us</h2>
+            <p class="fade-in">
+              We provide exceptional real estate solutions, connecting people
+              with their dream homes, modern apartments, and smart investments.
+            </p>
+
+            <div class="about-counts">
+              <div class="count-box fade-in">
+                <span class="count" data-target="3000">0</span>
+                <p>Sq. Ft.</p>
+              </div>
+              <div class="count-box fade-in">
+                <span class="count" data-target="4">0</span>
+                <p>Bedrooms</p>
+              </div>
+              <div class="count-box fade-in">
+                <span class="count" data-target="3">0</span>
+                <p>Bathrooms</p>
+              </div>
+              <div class="count-box fade-in">
+                <span class="count" data-target="2">0</span>
+                <p>Car Parks</p>
+              </div>
+              <div class="count-box fade-in">
+                <span class="count" data-target="2024">0</span>
+                <p>Year Built</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
+      </section>
 
+      <!-- Amenities Section -->
+      <section class="amenities-section">
+        <h2>Top-Tier Amenities</h2>
+        <ul class="amenities-list">
+          <li>Swimming Pool</li>
+          <li>Fully Equipped Gym</li>
+          <li>24/7 Security</li>
+          <li>Clubhouse</li>
+          <li>Children's Play Area</li>
+        </ul>
+      </section>
 
+      <section class="gallery-section">
+        <h2>Property Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/1.jpg" alt="Property 1" />
+            <p>Luxury Villa</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/2.jpg" alt="Property 2" />
+            <p>Modern Apartment</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/3.jpg" alt="Property 3" />
+            <p>Beach House</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/4.jpg" alt="Property 4" />
+            <p>City Penthouse</p>
+          </div>
+          <div class="gallery-item">
+            <img src="images/5.jpg" alt="Property 5" />
+            <p>Urban Flat</p>
+          </div>
+        </div>
+      </section>
 
-  <!-- Amenities Section -->
-<section class="amenities-section">
-    <h2>Top-Tier Amenities</h2>
-    <ul class="amenities-list">
-      <li>Swimming Pool</li>
-      <li>Fully Equipped Gym</li>
-      <li>24/7 Security</li>
-      <li> Clubhouse</li>
-      <li> Children's Play Area</li>
-    </ul>
-  </section>
-  
+      <!-- Font Awesome + AOS -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      />
 
-  <section class="gallery-section">
-    <h2>Property Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/1.jpg" alt="Property 1">
-        <p>Luxury Villa</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/2.jpg" alt="Property 2">
-        <p>Modern Apartment</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/3.jpg" alt="Property 3">
-        <p>Beach House</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/4.jpg" alt="Property 4">
-        <p>City Penthouse</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/5.jpg" alt="Property 5">
-        <p>Urban Flat</p>
-      </div>
-      
-    </div>
-  </section>
-  
-  
+      <section class="floorplans-section" id="floorplans">
+        <h2 data-aos="fade-up">Floor Plans</h2>
+        <div class="floorplans-grid">
+          <div class="floorplan-item" data-aos="fade-right">
+            <a href="images/floor1.jpg" target="_blank">
+              <img src="images/floor1.jpg" alt="2BHK Floor Plan" />
+            </a>
+            <h3>2BHK Type A</h3>
+            <p><i class="fas fa-ruler-combined"></i> 1200 sq.ft</p>
+            <p>
+              <i class="fas fa-bed"></i> 2 Bedrooms |
+              <i class="fas fa-bath"></i> 2 Bathrooms |
+              <i class="fas fa-warehouse"></i> 1 Balcony
+            </p>
+            <p><strong>₹65 Lakhs</strong></p>
+            <a href="pdf/bill1.pdf" download class="download-btn"
+              >Download Plan</a
+            >
+          </div>
 
- <!-- Font Awesome + AOS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+          <div class="floorplan-item" data-aos="fade-left">
+            <a href="images/floor2.jpg" target="_blank">
+              <img src="images/floor2.jpg" alt="3BHK Floor Plan" />
+            </a>
+            <h3>3BHK Type B</h3>
+            <p><i class="fas fa-ruler-combined"></i> 1650 sq.ft</p>
+            <p>
+              <i class="fas fa-bed"></i> 3 Bedrooms |
+              <i class="fas fa-bath"></i> 3 Bathrooms |
+              <i class="fas fa-warehouse"></i> 2 Balconies
+            </p>
+            <p><strong>₹85 Lakhs</strong></p>
+            <a href="pdf/bill1.pdf" download class="download-btn"
+              >Download Plan</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="logo.png" class="footer-logo-img" />
+          </div>
 
-<section class="floorplans-section" id="floorplans">
-  <h2 data-aos="fade-up">Floor Plans</h2>
-  <div class="floorplans-grid">
-
-    <div class="floorplan-item" data-aos="fade-right">
-      <a href="images/floor1.jpg" target="_blank">
-        <img src="images/floor1.jpg" alt="2BHK Floor Plan">
-      </a>
-      <h3>2BHK Type A</h3>
-      <p><i class="fas fa-ruler-combined"></i> 1200 sq.ft</p>
-      <p><i class="fas fa-bed"></i> 2 Bedrooms | <i class="fas fa-bath"></i> 2 Bathrooms | <i class="fas fa-warehouse"></i> 1 Balcony</p>
-      <p><strong>₹65 Lakhs</strong></p>
-      <a href="pdf/bill1.pdf" download class="download-btn">Download Plan</a>
-    </div>
-
-    <div class="floorplan-item" data-aos="fade-left">
-      <a href="images/floor2.jpg" target="_blank">
-        <img src="images/floor2.jpg" alt="3BHK Floor Plan">
-      </a>
-      <h3>3BHK Type B</h3>
-      <p><i class="fas fa-ruler-combined"></i> 1650 sq.ft</p>
-      <p><i class="fas fa-bed"></i> 3 Bedrooms | <i class="fas fa-bath"></i> 3 Bathrooms | <i class="fas fa-warehouse"></i> 2 Balconies</p>
-      <p><strong>₹85 Lakhs</strong></p>
-      <a href="pdf/bill1.pdf" download class="download-btn">Download Plan</a>
-    </div>
-
-  </div>
-</section>
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-container">
-      <div class="footer-logo">
-          <img src="logo.png" class="footer-logo-img" />
-      </div>
-
-      <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
               <li><a href="home.html">Home</a></li>
               <li><a href="home2.html">Home 2</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html">Contact</a></li>
-          </ul>
-      </div>
-      <div class="footer-services">
-          <h3>Our Services</h3>
-          <ul>
-              <li><a href="modern-family-home.html">Modern Family Home</a></li>
-              <li><a href="luxury-downtown-apartment.html">Luxury Downtown Apartment</a></li>
-              <li><a href="suburban-family-estate.html">Suburban Family Estate</a></li>
-              <li><a href="beachfront-luxury-villa.html">Beachfront Luxury Villa</a></li>
-              <li><a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a></li>
-              <li><a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a></li>
-          </ul>
-      </div>
-      <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <p>Email: info@dreamhomes.com</p>
-          <p>Phone: +91-9876543210</p>
-          <div class="social-icons">
-              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </ul>
           </div>
+          <div class="footer-services">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="modern-family-home.html">Modern Family Home</a></li>
+              <li>
+                <a href="luxury-downtown-apartment.html"
+                  >Luxury Downtown Apartment</a
+                >
+              </li>
+              <li>
+                <a href="suburban-family-estate.html">Suburban Family Estate</a>
+              </li>
+              <li>
+                <a href="beachfront-luxury-villa.html"
+                  >Beachfront Luxury Villa</a
+                >
+              </li>
+              <li>
+                <a href="skyline-penthouse-suite.html"
+                  >Skyline Penthouse Suite</a
+                >
+              </li>
+              <li>
+                <a href="rustic-mountain-retreat.html"
+                  >Rustic Mountain Retreat</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@dreamhomes.com</p>
+            <p>Phone: +91-9876543210</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.whatsapp.com/"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="https://www.linkedin.com/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-      </div>
-  </div>
-</footer>
+      <!-- AOS JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        AOS.init();
+        // Language translation logic
+        const translations = {
+          en: {
+            heroTitle: "Luxury Living Awaits",
+            heroDesc: "Explore premium properties designed for your lifestyle.",
+            aboutTitle: "About Us",
+            aboutDesc:
+              "We provide exceptional real estate solutions, connecting people with their dream homes, modern apartments, and smart investments.",
+            aboutCounts: [
+              "Sq. Ft.",
+              "Bedrooms",
+              "Bathrooms",
+              "Car Parks",
+              "Year Built",
+            ],
+            nav: [
+              "Home",
+              "Home 1",
+              "Home 2",
+              "About Us",
+              "Services",
+              "All Services",
+              "Modern Family Home",
+              "Luxury Downtown Apartment",
+              "Suburban Family Estate",
+              "Beachfront Luxury Villa",
+              "Skyline Penthouse Suite",
+              "Rustic Mountain Retreat",
+              "Blog",
+              "Contact Us",
+            ],
+            amenitiesTitle: "Top-Tier Amenities",
+            amenities: [
+              "Swimming Pool",
+              "Fully Equipped Gym",
+              "24/7 Security",
+              "Clubhouse",
+              "Children's Play Area",
+            ],
+            galleryTitle: "Property Gallery",
+            gallery: [
+              "Luxury Villa",
+              "Modern Apartment",
+              "Beach House",
+              "City Penthouse",
+              "Urban Flat",
+            ],
+            floorPlans: "Floor Plans",
+            floorplanItems: [
+              {
+                imgAlt: "2BHK Floor Plan",
+                title: "2BHK Type A",
+                area: "1200 sq.ft",
+                details: "2 Bedrooms | 2 Bathrooms | 1 Balcony",
+                price: "₹65 Lakhs",
+                download: "Download Plan",
+              },
+              {
+                imgAlt: "3BHK Floor Plan",
+                title: "3BHK Type B",
+                area: "1650 sq.ft",
+                details: "3 Bedrooms | 3 Bathrooms | 2 Balconies",
+                price: "₹85 Lakhs",
+                download: "Download Plan",
+              },
+            ],
+            quickLinks: "Quick Links",
+            ourServices: "Our Services",
+            contactUs: "Contact Us",
+            email: "Email: info@dreamhomes.com",
+            phone: "Phone: +91-9876543210",
+          },
+          ar: {
+            heroTitle: "تنتظرك حياة فاخرة",
+            heroDesc: "استكشف العقارات الفاخرة المصممة لنمط حياتك.",
+            aboutTitle: "معلومات عنا",
+            aboutDesc:
+              "نحن نقدم حلولاً عقارية استثنائية، ونربط الناس بمنازل أحلامهم وشققهم الحديثة واستثماراتهم الذكية.",
+            aboutCounts: [
+              "قدم مربع",
+              "غرف نوم",
+              "حمامات",
+              "مواقف سيارات",
+              "سنة البناء",
+            ],
+            nav: [
+              "الرئيسية",
+              "الصفحة 1",
+              "الصفحة 2",
+              "معلومات عنا",
+              "الخدمات",
+              "كل الخدمات",
+              "منزل عائلي حديث",
+              "شقة فاخرة وسط المدينة",
+              "عقار عائلي في الضواحي",
+              "فيلا فاخرة على الشاطئ",
+              "جناح بنتهاوس سكاي لاين",
+              "ملاذ جبلي ريفي",
+              "المدونة",
+              "اتصل بنا",
+            ],
+            amenitiesTitle: "وسائل الراحة الفاخرة",
+            amenities: [
+              "حمام سباحة",
+              "صالة ألعاب رياضية مجهزة بالكامل",
+              "أمن على مدار الساعة",
+              "نادي اجتماعي",
+              "منطقة لعب للأطفال",
+            ],
+            galleryTitle: "معرض العقارات",
+            gallery: [
+              "فيلا فاخرة",
+              "شقة حديثة",
+              "منزل شاطئي",
+              "بنتهاوس المدينة",
+              "شقة حضرية",
+            ],
+            floorPlans: "مخططات الطوابق",
+            floorplanItems: [
+              {
+                imgAlt: "مخطط طابق 2 غرف نوم",
+                title: "شقة 2 غرف نوم النوع أ",
+                area: "1200 قدم مربع",
+                details: "2 غرف نوم | 2 حمامات | 1 شرفة",
+                price: "65 لاك روبية",
+                download: "تحميل المخطط",
+              },
+              {
+                imgAlt: "مخطط طابق 3 غرف نوم",
+                title: "شقة 3 غرف نوم النوع ب",
+                area: "1650 قدم مربع",
+                details: "3 غرف نوم | 3 حمامات | 2 شرفات",
+                price: "85 لاك روبية",
+                download: "تحميل المخطط",
+              },
+            ],
+            quickLinks: "روابط سريعة",
+            ourServices: "خدماتنا",
+            contactUs: "اتصل بنا",
+            email: "البريد الإلكتروني: info@dreamhomes.com",
+            phone: "الهاتف: +91-9876543210",
+          },
+          he: {
+            heroTitle: "חיים יוקרתיים מחכים לך",
+            heroDesc: "גלה נכסים יוקרתיים המותאמים לאורח החיים שלך.",
+            aboutTitle: "עלינו",
+            aboutDesc:
+              'אנו מספקים פתרונות נדל"ן יוצאי דופן, מחברים אנשים לבתים חלומיים, דירות מודרניות והשקעות חכמות.',
+            aboutCounts: ['מ"ר', "חדרי שינה", "חדרי רחצה", "חניות", "שנת בניה"],
+            nav: [
+              "בית",
+              "בית 1",
+              "בית 2",
+              "עלינו",
+              "שירותים",
+              "כל השירותים",
+              "בית משפחתי מודרני",
+              "דירת יוקרה במרכז העיר",
+              "אחוזה משפחתית בפרברים",
+              "וילה יוקרתית על החוף",
+              "פנטהאוז סקייליין",
+              "מקום מפלט הררי כפרי",
+              "בלוג",
+              "צור קשר",
+            ],
+            amenitiesTitle: "מתקנים ברמה גבוהה",
+            amenities: [
+              "בריכת שחייה",
+              "חדר כושר מאובזר",
+              "אבטחה 24/7",
+              "מועדון חברים",
+              "אזור משחקים לילדים",
+            ],
+            galleryTitle: "גלריית נכסים",
+            gallery: [
+              "וילה יוקרתית",
+              "דירה מודרנית",
+              "בית חוף",
+              "פנטהאוז עירוני",
+              "דירה אורבנית",
+            ],
+            floorPlans: "תוכניות קומה",
+            floorplanItems: [
+              {
+                imgAlt: "תוכנית קומה 2 חדרי שינה",
+                title: "2 חדרי שינה סוג A",
+                area: "1200 רגל רבוע",
+                details: "2 חדרי שינה | 2 חדרי רחצה | 1 מרפסת",
+                price: '65 לאך ש"ח',
+                download: "הורד תוכנית",
+              },
+              {
+                imgAlt: "תוכנית קומה 3 חדרי שינה",
+                title: "3 חדרי שינה סוג B",
+                area: "1650 רגל רבוע",
+                details: "3 חדרי שינה | 3 חדרי רחצה | 2 מרפסות",
+                price: '85 לאך ש"ח',
+                download: "הורד תוכנית",
+              },
+            ],
+            quickLinks: "קישורים מהירים",
+            ourServices: "השירותים שלנו",
+            contactUs: "צור קשר",
+            email: "אימייל: info@dreamhomes.com",
+            phone: "טלפון: +91-9876543210",
+          },
+        };
 
-<!-- AOS JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+        function setLanguage(lang) {
+          // Hero section
+          document.querySelector(".hero-text h1").textContent =
+            translations[lang].heroTitle;
+          document.querySelector(".hero-text p").textContent =
+            translations[lang].heroDesc;
+          // About section
+          document.querySelector(".about-text h2").textContent =
+            translations[lang].aboutTitle;
+          document.querySelector(".about-text p").textContent =
+            translations[lang].aboutDesc;
+          // About counts
+          const aboutCounts = document.querySelectorAll(
+            ".about-counts .count-box p"
+          );
+          translations[lang].aboutCounts.forEach((txt, i) => {
+            if (aboutCounts[i]) aboutCounts[i].textContent = txt;
+          });
+          // Amenities section
+          document.querySelector(".amenities-section h2").textContent =
+            translations[lang].amenitiesTitle;
+          const amenitiesList = document.querySelectorAll(".amenities-list li");
+          translations[lang].amenities.forEach((txt, i) => {
+            if (amenitiesList[i]) amenitiesList[i].textContent = txt;
+          });
+          // Gallery section
+          document.querySelector(".gallery-section h2").textContent =
+            translations[lang].galleryTitle;
+          const galleryLabels = document.querySelectorAll(".gallery-item p");
+          translations[lang].gallery.forEach((txt, i) => {
+            if (galleryLabels[i]) galleryLabels[i].textContent = txt;
+          });
+          // Floor Plans section
+          document.querySelector(".floorplans-section h2").textContent =
+            translations[lang].floorPlans;
+          // Floorplan items
+          const floorplanItems = document.querySelectorAll(".floorplan-item");
+          translations[lang].floorplanItems.forEach((item, i) => {
+            if (floorplanItems[i]) {
+              floorplanItems[i].querySelector("img").alt = item.imgAlt;
+              floorplanItems[i].querySelector("h3").textContent = item.title;
+              floorplanItems[i].querySelectorAll(
+                "p"
+              )[0].innerHTML = `<i class="fas fa-ruler-combined"></i> ${item.area}`;
+              floorplanItems[i].querySelectorAll("p")[1].innerHTML =
+                item.details.replace(
+                  /\|/g,
+                  '<span style="margin:0 4px;">|</span>'
+                );
+              floorplanItems[i].querySelectorAll(
+                "p"
+              )[2].innerHTML = `<strong>${item.price}</strong>`;
+              floorplanItems[i].querySelector("a.download-btn").textContent =
+                item.download;
+            }
+          });
+          // Footer
+          document.querySelector(".footer-links h3").textContent =
+            translations[lang].quickLinks;
+          document.querySelector(".footer-services h3").textContent =
+            translations[lang].ourServices;
+          document.querySelector(".footer-contact h3").textContent =
+            translations[lang].contactUs;
+          document.querySelector(
+            ".footer-contact p:nth-of-type(1)"
+          ).textContent = translations[lang].email;
+          document.querySelector(
+            ".footer-contact p:nth-of-type(2)"
+          ).textContent = translations[lang].phone;
+          // Header nav
+          const navLinks = document.querySelectorAll(".nav-links > li > a");
+          navLinks[0].textContent = translations[lang].nav[0]; // Home
+          navLinks[1].textContent = translations[lang].nav[3]; // About Us
+          navLinks[2].textContent = translations[lang].nav[4]; // Services
+          navLinks[3].textContent = translations[lang].nav[12]; // Blog
+          navLinks[4].textContent = translations[lang].nav[13]; // Contact Us
+          // Home dropdown
+          const homeDropdown = document.querySelectorAll(
+            ".nav-links > li.dropdown ul.dropdown-content li a"
+          );
+          homeDropdown[0].textContent = translations[lang].nav[1]; // Home 1
+          homeDropdown[1].textContent = translations[lang].nav[2]; // Home 2
+          // Services dropdown
+          const servicesDropdown = document.querySelectorAll(
+            ".nav-links > li.dropdown ul.dropdown-content li a"
+          );
+          servicesDropdown[2].textContent = translations[lang].nav[5]; // All Services
+          servicesDropdown[3].textContent = translations[lang].nav[6]; // Modern Family Home
+          servicesDropdown[4].textContent = translations[lang].nav[7]; // Luxury Downtown Apartment
+          servicesDropdown[5].textContent = translations[lang].nav[8]; // Suburban Family Estate
+          servicesDropdown[6].textContent = translations[lang].nav[9]; // Beachfront Luxury Villa
+          servicesDropdown[7].textContent = translations[lang].nav[10]; // Skyline Penthouse Suite
+          servicesDropdown[8].textContent = translations[lang].nav[11]; // Rustic Mountain Retreat
+          // Set dir for Arabic/Hebrew
+          if (lang === "ar" || lang === "he") {
+            document.body.setAttribute("dir", "rtl");
+          } else {
+            document.body.setAttribute("dir", "ltr");
+          }
+        }
 
-  
-
-</body>
-
-  
+        document
+          .getElementById("language-select")
+          .addEventListener("change", function () {
+            setLanguage(this.value);
+          });
+        // Set default language on load
+        setLanguage(document.getElementById("language-select").value);
+      </script>
+    </body>
+  </body>
+</html>

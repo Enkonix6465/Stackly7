@@ -1,278 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Homepage</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="home.js"></script>
+    <script defer src="style.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Real Estate Homepage</title>
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="about.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="home.js"></script>
-  <script defer src="style.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header class="site-header sticky">
-    <div class="header-container">
-      <div class="footer-logo">
-        <img src="logo.png" class="footer-logo-img" />
-      </div>
-
-      <nav class="navbar" id="navbar">
-        <ul class="nav-links">
-          <li class="dropdown">
-            <a href="home.html">Home</a>
-            <ul class="dropdown-content">
-              <li><a href="home.html">Home 1</a></li>
-              <li><a href="home2.html">Home 2</a></li>
-            </ul>
-          </li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="#">Services</a>
-            <ul class="dropdown-content">
-              <li><a href="services.html">All Services</a></li>
-              <li><a href="modern-family-home.html">Modern Family Home</a></li>
-              <li><a href="luxury-downtown-apartment.html">Luxury Downtown Apartment</a></li>
-              <li><a href="suburban-family-estate.html">Suburban Family Estate</a></li>
-              <li><a href="beachfront-luxury-villa.html">Beachfront Luxury Villa4</a></li>
-              <li><a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a></li>
-              <li><a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-
-      <div class="user-login">
-        <div id="user-initials" class="user-icon">GU</div>
-        <div id="logout-dropdown" class="logout-dropdown">
-          <button id="logout-btn">Logout</button>
-        </div>
-      </div>
-
-
-      <div class="hamburger" id="hamburger">&#9776;</div>
-    </div>
-  </header>
-
-
-
-
-
-
-
-
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <video autoplay muted loop>
-      <source src="images/hero-bg.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-text">
-      <h1>About Us</h1>
-      <p>Turning dreams into addresses <br>trusted real estate experts for over a decade.</p>
-    </div>
-  </section>
-
-
-  <!-- 2. Our Mission -->
-  <section class="our-story-section" data-aos="fade-up">
-    <div class="our-story-container">
-      <div class="story-text">
-        <h2>Our Mission</h2>
-        <p>
-          At Real Estate Experts, our mission is to redefine how people experience real estate. We are committed to
-          guiding families, investors, and first-time buyers with integrity, transparency, and expert insights.
-        </p>
-        <p>
-          Through cutting-edge technology, dedicated professionals, and strong industry partnerships, we aim to simplify
-          property buying and selling. Our goal is to create a seamless journey from exploration to ownership — built on
-          trust, value, and long-term satisfaction.
-        </p>
-
-      </div>
-      <div class="story-animation">
-        <img src="images/team-story.jpg" alt="Our Journey" />
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- 3. Our Story -->
-  <section class="our-story-section" data-aos="fade-up">
-    <div class="our-story-container">
-      <!-- Image on Left -->
-      <div class="story-animation">
-        <img src="images/team-story.jpg" alt="Our Journey" />
-      </div>
-
-      <!-- Text on Right -->
-      <div class="story-text">
-        <h2>Our Story</h2>
-        <p>
-          Founded in 2010 by industry veteran Ravi Sharma, Real Estate Experts began as a one-person venture with a
-          laptop and a deep passion for real estate.
-          Within a few years, we grew from a small office to a dynamic team of 50+ agents operating across multiple
-          cities.
-        </p>
-        <p>
-          Over the years, we've sold over 10,000 homes, helped thousands of investors grow their wealth, and earned the
-          trust of families from all walks of life.
-          Today, we combine our deep market knowledge with the latest technology to deliver a real estate experience
-          that’s simple, fast, and stress-free.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 2. Our Mission -->
-  <section class="our-story-section" data-aos="fade-up">
-    <div class="our-story-container">
-      <div class="story-text">
-        <h2>Our Values</h2>
-        <p>
-          At the heart of Real Estate Experts lies a strong set of core values that guide everything we do. These
-          principles define how we serve our clients, build relationships, and shape the future of real estate.
-        </p>
-
-
-
-
-      </div>
-      <div class="story-animation">
-        <img src="images/team-story.jpg" alt="Our Journey" />
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- 4. Meet the Team -->
-  <section class="team-section" data-aos="fade-up">
-    <h2>Meet the Team</h2>
-    <div class="team-cards">
-      <div class="team-card">
-        <img src="images/7.jpg" alt="Ravi Sharma">
-        <h3>Ravi Sharma</h3>
-        <p class="role">Founder & CEO</p>
-        <p>Ravi brings 20 years of real estate and finance experience, leading the company with a vision of innovation
-          and trust.</p>
-      </div>
-      <div class="team-card">
-        <img src="images/8.jpg" alt="Anita Rao">
-        <h3>Anita Rao</h3>
-        <p class="role">Lead Realtor</p>
-        <p>Anita has closed over 500 deals, specializing in luxury homes, NRIs, and first-time home buyers. She’s your
-          friendly property expert.</p>
-      </div>
-      <div class="team-card">
-        <img src="images/9.jpg" alt="Karan Mehta">
-        <h3>Karan Mehta</h3>
-        <p class="role">Senior Property Consultant</p>
-        <p>Karan's strong negotiation skills and market analytics make him an invaluable advisor for investment
-          properties and commercial spaces.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 5. Why Choose Us -->
-  <section class="why-choose-section" data-aos="fade-up">
-    <h2>Why Choose Us</h2>
-    <div class="why-cards">
-      <div class="why-card">
-        <div class="why-icon">🏆</div>
-        <h3>Experience</h3>
-        <p>With over a decade in the industry, we understand market trends, pricing, and legal nuances that save you
-          time and money.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🤝</div>
-        <h3>Trust</h3>
-        <p>Our clients refer their friends and family because we value honesty, follow through on promises, and always
-          prioritize your best interest.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💼</div>
-        <h3>Support</h3>
-        <p>We’re not just here for the sale. From legal documentation to interior design referrals, our full-service
-          support ensures a smooth transition.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- 6. Call to Action -->
-  <section class="cta-section" data-aos="fade-up">
-    <div class="cta-content">
-      <h2>Let’s Get You Home</h2>
-      <p>
-        Whether you're buying, selling, investing, or just exploring your options, we're here to help.
-        Schedule a free consultation and let’s make your real estate journey a success.
-      </p>
-      <a href="#contact" class="cta-button">Contact Us</a>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="logo.png" class="footer-logo-img" />
-      </div>
-
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="home2.html">Home 2</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-services">
-        <h3>Our Services</h3>
-        <ul>
-          <li><a href="modern-family-home.html">Modern Family Home</a></li>
-          <li><a href="luxury-downtown-apartment.html">Luxury Downtown Apartment</a></li>
-          <li><a href="suburban-family-estate.html">Suburban Family Estate</a></li>
-          <li><a href="beachfront-luxury-villa.html">Beachfront Luxury Villa</a></li>
-          <li><a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a></li>
-          <li><a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: info@dreamhomes.com</p>
-        <p>Phone: +91-9876543210</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+  <body>
+    <!-- Header -->
+    <header class="site-header sticky">
+      <div class="header-container">
+        <div class="footer-logo">
+          <img src="logo.png" class="footer-logo-img" />
         </div>
 
+        <nav class="navbar" id="navbar">
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a href="#">Home</a>
+              <ul class="dropdown-content">
+                <li><a href="home.html">Home 1</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <ul class="dropdown-content">
+                <li><a href="services.html">All Services</a></li>
+                <li>
+                  <a href="modern-family-home.html">Modern Family Home</a>
+                </li>
+                <li>
+                  <a href="luxury-downtown-apartment.html"
+                    >Luxury Downtown Apartment</a
+                  >
+                </li>
+                <li>
+                  <a href="suburban-family-estate.html"
+                    >Suburban Family Estate</a
+                  >
+                </li>
+                <li>
+                  <a href="beachfront-luxury-villa.html"
+                    >Beachfront Luxury Villa4</a
+                  >
+                </li>
+                <li>
+                  <a href="skyline-penthouse-suite.html"
+                    >Skyline Penthouse Suite</a
+                  >
+                </li>
+                <li>
+                  <a href="rustic-mountain-retreat.html"
+                    >Rustic Mountain Retreat</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <!-- Language Dropdown -->
+        <div
+          class="language-dropdown"
+          style="display: flex; align-items: center; margin-left: 1rem"
+        >
+          <select
+            id="language-select"
+            aria-label="Select Language"
+            class="nav-select"
+            style="
+              padding: 6px 12px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              background: #fff;
+              font-size: 1rem;
+              color: #333;
+            "
+          >
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="he">Hebrew</option>
+          </select>
+        </div>
+
+        <div class="user-login">
+          <div id="user-initials" class="user-icon">GU</div>
+          <div id="logout-dropdown" class="logout-dropdown">
+            <button id="logout-btn">Logout</button>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger">&#9776;</div>
       </div>
-    </div>
-  </footer>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <video autoplay muted loop>
+        <source src="images/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-text">
+        <h1>About Us</h1>
+        <p>
+          Turning dreams into addresses <br />trusted real estate experts for
+          over a decade.
+        </p>
+      </div>
+    </section>
 
-  <script>
-    function contactRedirect() {
-      window.location.href = "contact.html";
-    }
-  </script>
-</body>
+    <!-- 2. Our Mission -->
+    <section class="our-story-section" data-aos="fade-up">
+      <div class="our-story-container">
+        <div class="story-text">
+          <h2>Our Mission</h2>
+          <p>
+            At Real Estate Experts, our mission is to redefine how people
+            experience real estate. We are committed to guiding families,
+            investors, and first-time buyers with integrity, transparency, and
+            expert insights.
+          </p>
+          <p>
+            Through cutting-edge technology, dedicated professionals, and strong
+            industry partnerships, we aim to simplify property buying and
+            selling. Our goal is to create a seamless journey from exploration
+            to ownership — built on trust, value, and long-term satisfaction.
+          </p>
+        </div>
+        <div class="story-animation">
+          <img src="images/team-story.jpg" alt="Our Journey" />
+        </div>
+      </div>
+    </section>
 
+    <!-- 3. Our Story -->
+    <section class="our-story-section" data-aos="fade-up">
+      <div class="our-story-container">
+        <!-- Image on Left -->
+        <div class="story-animation">
+          <img src="images/team-story.jpg" alt="Our Journey" />
+        </div>
+
+        <!-- Text on Right -->
+        <div class="story-text">
+          <h2>Our Story</h2>
+          <p>
+            Founded in 2010 by industry veteran Ravi Sharma, Real Estate Experts
+            began as a one-person venture with a laptop and a deep passion for
+            real estate. Within a few years, we grew from a small office to a
+            dynamic team of 50+ agents operating across multiple cities.
+          </p>
+          <p>
+            Over the years, we've sold over 10,000 homes, helped thousands of
+            investors grow their wealth, and earned the trust of families from
+            all walks of life. Today, we combine our deep market knowledge with
+            the latest technology to deliver a real estate experience that’s
+            simple, fast, and stress-free.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Our Mission -->
+    <section class="our-story-section" data-aos="fade-up">
+      <div class="our-story-container">
+        <div class="story-text">
+          <h2>Our Values</h2>
+          <p>
+            At the heart of Real Estate Experts lies a strong set of core values
+            that guide everything we do. These principles define how we serve
+            our clients, build relationships, and shape the future of real
+            estate.
+          </p>
+        </div>
+        <div class="story-animation">
+          <img src="images/team-story.jpg" alt="Our Journey" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Meet the Team -->
+    <section class="team-section" data-aos="fade-up">
+      <h2>Meet the Team</h2>
+      <div class="team-cards">
+        <div class="team-card">
+          <img src="images/7.jpg" alt="Ravi Sharma" />
+          <h3>Ravi Sharma</h3>
+          <p class="role">Founder & CEO</p>
+          <p>
+            Ravi brings 20 years of real estate and finance experience, leading
+            the company with a vision of innovation and trust.
+          </p>
+        </div>
+        <div class="team-card">
+          <img src="images/8.jpg" alt="Anita Rao" />
+          <h3>Anita Rao</h3>
+          <p class="role">Lead Realtor</p>
+          <p>
+            Anita has closed over 500 deals, specializing in luxury homes, NRIs,
+            and first-time home buyers. She’s your friendly property expert.
+          </p>
+        </div>
+        <div class="team-card">
+          <img src="images/9.jpg" alt="Karan Mehta" />
+          <h3>Karan Mehta</h3>
+          <p class="role">Senior Property Consultant</p>
+          <p>
+            Karan's strong negotiation skills and market analytics make him an
+            invaluable advisor for investment properties and commercial spaces.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Why Choose Us -->
+    <section class="why-choose-section" data-aos="fade-up">
+      <h2>Why Choose Us</h2>
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="why-icon">🏆</div>
+          <h3>Experience</h3>
+          <p>
+            With over a decade in the industry, we understand market trends,
+            pricing, and legal nuances that save you time and money.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🤝</div>
+          <h3>Trust</h3>
+          <p>
+            Our clients refer their friends and family because we value honesty,
+            follow through on promises, and always prioritize your best
+            interest.
+          </p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💼</div>
+          <h3>Support</h3>
+          <p>
+            We’re not just here for the sale. From legal documentation to
+            interior design referrals, our full-service support ensures a smooth
+            transition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Call to Action -->
+    <section class="cta-section" data-aos="fade-up">
+      <div class="cta-content">
+        <h2>Let’s Get You Home</h2>
+        <p>
+          Whether you're buying, selling, investing, or just exploring your
+          options, we're here to help. Schedule a free consultation and let’s
+          make your real estate journey a success.
+        </p>
+        <a href="#contact" class="cta-button">Contact Us</a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="logo.png" class="footer-logo-img" />
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="modern-family-home.html">Modern Family Home</a></li>
+            <li>
+              <a href="luxury-downtown-apartment.html"
+                >Luxury Downtown Apartment</a
+              >
+            </li>
+            <li>
+              <a href="suburban-family-estate.html">Suburban Family Estate</a>
+            </li>
+            <li>
+              <a href="beachfront-luxury-villa.html">Beachfront Luxury Villa</a>
+            </li>
+            <li>
+              <a href="skyline-penthouse-suite.html">Skyline Penthouse Suite</a>
+            </li>
+            <li>
+              <a href="rustic-mountain-retreat.html">Rustic Mountain Retreat</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@dreamhomes.com</p>
+          <p>Phone: +91-9876543210</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.whatsapp.com/"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+            <a href="https://www.linkedin.com/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Translation object for about.html
+      const translations = {
+        en: {
+          nav: ["Home", "Home 1", "Home 2", "About Us", "Services", "All Services", "Modern Family Home", "Luxury Downtown Apartment", "Suburban Family Estate", "Beachfront Luxury Villa", "Skyline Penthouse Suite", "Rustic Mountain Retreat", "Blog", "Contact Us"],
+          heroTitle: "About Us",
+          heroDesc: "Turning dreams into addresses <br />trusted real estate experts for over a decade.",
+          missionTitle: "Our Mission",
+          mission: [
+            "At Real Estate Experts, our mission is to redefine how people experience real estate. We are committed to guiding families, investors, and first-time buyers with integrity, transparency, and expert insights.",
+            "Through cutting-edge technology, dedicated professionals, and strong industry partnerships, we aim to simplify property buying and selling. Our goal is to create a seamless journey from exploration to ownership — built on trust, value, and long-term satisfaction."
+          ],
+          valuesTitle: "Our Values",
+          values: [
+            "At the heart of Real Estate Experts lies a strong set of core values that guide everything we do. These principles define how we serve our clients, build relationships, and shape the future of real estate."
+          ],
+          storyTitle: "Our Story",
+          story: [
+            "Founded in 2010 by industry veteran Ravi Sharma, Real Estate Experts began as a one-person venture with a laptop and a deep passion for real estate. Within a few years, we grew from a small office to a dynamic team of 50+ agents operating across multiple cities.",
+            "Over the years, we've sold over 10,000 homes, helped thousands of investors grow their wealth, and earned the trust of families from all walks of life. Today, we combine our deep market knowledge with the latest technology to deliver a real estate experience that’s simple, fast, and stress-free."
+          ],
+          teamTitle: "Meet the Team",
+          team: [
+            {name: "Ravi Sharma", role: "Founder & CEO", desc: "Ravi brings 20 years of real estate and finance experience, leading the company with a vision of innovation and trust."},
+            {name: "Anita Rao", role: "Lead Realtor", desc: "Anita has closed over 500 deals, specializing in luxury homes, NRIs, and first-time home buyers. She’s your friendly property expert."},
+            {name: "Karan Mehta", role: "Senior Property Consultant", desc: "Karan's strong negotiation skills and market analytics make him an invaluable advisor for investment properties and commercial spaces."}
+          ],
+          whyTitle: "Why Choose Us",
+          why: [
+            {icon: "🏆", title: "Experience", desc: "With over a decade in the industry, we understand market trends, pricing, and legal nuances that save you time and money."},
+            {icon: "🤝", title: "Trust", desc: "Our clients refer their friends and family because we value honesty, follow through on promises, and always prioritize your best interest."},
+            {icon: "💼", title: "Support", desc: "We’re not just here for the sale. From legal documentation to interior design referrals, our full-service support ensures a smooth transition."}
+          ],
+          ctaTitle: "Let’s Get You Home",
+          ctaDesc: "Whether you're buying, selling, investing, or just exploring your options, we're here to help. Schedule a free consultation and let’s make your real estate journey a success.",
+          ctaBtn: "Contact Us",
+          quickLinks: "Quick Links",
+          quickLinksList: ["Home", "Home 2", "About Us", "Services", "Blog", "Contact"],
+          ourServices: "Our Services",
+          ourServicesList: [
+            "Modern Family Home",
+            "Luxury Downtown Apartment",
+            "Suburban Family Estate",
+            "Beachfront Luxury Villa",
+            "Skyline Penthouse Suite",
+            "Rustic Mountain Retreat"
+          ],
+          contactUs: "Contact Us",
+          email: "Email: info@dreamhomes.com",
+          phone: "Phone: +91-9876543210"
+        },
+        ar: {
+          nav: ["الرئيسية", "الصفحة 1", "الصفحة 2", "معلومات عنا", "الخدمات", "كل الخدمات", "منزل عائلي حديث", "شقة فاخرة وسط المدينة", "عقار عائلي في الضواحي", "فيلا فاخرة على الشاطئ", "جناح بنتهاوس سكاي لاين", "ملاذ جبلي ريفي", "المدونة", "اتصل بنا"],
+          heroTitle: "معلومات عنا",
+          heroDesc: "نحو تحويل الأحلام إلى عناوين <br /> خبراء عقارات موثوقون لأكثر من عقد.",
+          missionTitle: "مهمتنا",
+          mission: [
+            "في خبراء العقارات، مهمتنا هي إعادة تعريف تجربة العقارات. نحن ملتزمون بإرشاد العائلات والمستثمرين والمشترين لأول مرة بالنزاهة والشفافية والخبرة.",
+            "من خلال التكنولوجيا المتقدمة والمهنيين المخلصين والشراكات القوية، نهدف إلى تبسيط شراء وبيع العقارات. هدفنا هو خلق رحلة سلسة من الاستكشاف إلى التملك — مبنية على الثقة والقيمة والرضا طويل الأمد."
+          ],
+          valuesTitle: "قيمنا",
+          values: [
+            "في صميم خبراء العقارات تكمن مجموعة قوية من القيم الأساسية التي توجه كل ما نقوم به. هذه المبادئ تحدد كيف نخدم عملاءنا ونبني العلاقات ونشكل مستقبل العقارات."
+          ],
+          storyTitle: "قصتنا",
+          story: [
+            "تأسست في عام 2010 على يد رافي شارما، بدأت خبراء العقارات كمشروع فردي بشغف عميق للعقارات. خلال سنوات قليلة، نمونا من مكتب صغير إلى فريق ديناميكي يضم أكثر من 50 وكيلاً في عدة مدن.",
+            "على مر السنين، بعنا أكثر من 10,000 منزل وساعدنا آلاف المستثمرين على تنمية ثرواتهم وكسبنا ثقة العائلات من جميع مناحي الحياة. اليوم، نجمع بين معرفتنا العميقة بالسوق وأحدث التقنيات لتقديم تجربة عقارية بسيطة وسريعة وخالية من التوتر."
+          ],
+          teamTitle: "تعرف على الفريق",
+          team: [
+            {name: "رافي شارما", role: "المؤسس والرئيس التنفيذي", desc: "رافي يمتلك 20 عامًا من الخبرة في العقارات والتمويل، ويقود الشركة برؤية للابتكار والثقة."},
+            {name: "أنيتا راو", role: "قائدة الوسطاء", desc: "أنيتا أتمت أكثر من 500 صفقة، متخصصة في المنازل الفاخرة والمغتربين والمشترين لأول مرة. إنها خبيرة العقارات الودودة الخاصة بك."},
+            {name: "كاران ميهتا", role: "مستشار عقاري أول", desc: "مهارات كاران التفاوضية القوية وتحليلات السوق تجعله مستشارًا لا يقدر بثمن للاستثمار العقاري والمساحات التجارية."}
+          ],
+          whyTitle: "لماذا تختارنا",
+          why: [
+            {icon: "🏆", title: "الخبرة", desc: "مع أكثر من عقد في المجال، نفهم اتجاهات السوق والتسعير والجوانب القانونية التي توفر لك الوقت والمال."},
+            {icon: "🤝", title: "الثقة", desc: "عملاؤنا يوصون بنا لأننا نقدر الصدق ونفي بالوعود ونضع مصلحتك أولاً دائماً."},
+            {icon: "💼", title: "الدعم", desc: "لسنا هنا فقط للبيع. من التوثيق القانوني إلى إحالات التصميم الداخلي، دعمنا الكامل يضمن انتقالاً سلسًا."}
+          ],
+          ctaTitle: "دعنا نوصلك إلى منزلك",
+          ctaDesc: "سواء كنت تشتري أو تبيع أو تستثمر أو تستكشف خياراتك فقط، نحن هنا لمساعدتك. احجز استشارة مجانية ودعنا نجعل رحلتك العقارية ناجحة.",
+          ctaBtn: "اتصل بنا",
+          quickLinks: "روابط سريعة",
+          quickLinksList: ["الرئيسية", "الصفحة 2", "معلومات عنا", "الخدمات", "المدونة", "اتصل"],
+          ourServices: "خدماتنا",
+          ourServicesList: [
+            "منزل عائلي حديث",
+            "شقة فاخرة وسط المدينة",
+            "عقار عائلي في الضواحي",
+            "فيلا فاخرة على الشاطئ",
+            "جناح بنتهاوس سكاي لاين",
+            "ملاذ جبلي ريفي"
+          ],
+          contactUs: "اتصل بنا",
+          email: "البريد الإلكتروني: info@dreamhomes.com",
+          phone: "الهاتف: +91-9876543210"
+        },
+        he: {
+          nav: ["בית", "בית 1", "בית 2", "עלינו", "שירותים", "כל השירותים", "בית משפחתי מודרני", "דירת יוקרה במרכז העיר", "אחוזה משפחתית בפרברים", "וילה יוקרתית על החוף", "פנטהאוז סקייליין", "מקום מפלט הררי כפרי", "בלוג", "צור קשר"],
+          heroTitle: "עלינו",
+          heroDesc: "הופכים חלומות לכתובות <br /> מומחי נדל\"ן אמינים למעלה מעשור.",
+          missionTitle: "המשימה שלנו",
+          mission: [
+            "ב-Real Estate Experts, המשימה שלנו היא להגדיר מחדש את חוויית הנדל\"ן. אנו מחויבים להדריך משפחות, משקיעים ורוכשים ראשונים ביושרה, שקיפות ומומחיות.",
+            "באמצעות טכנולוגיה מתקדמת, אנשי מקצוע מסורים ושותפויות חזקות, אנו שואפים לפשט את תהליך רכישת ומכירת הנדל\"ן. המטרה שלנו היא ליצור מסע חלק מחיפוש לבעלות — המבוסס על אמון, ערך ושביעות רצון ארוכת טווח."
+          ],
+          valuesTitle: "הערכים שלנו",
+          values: [
+            "בלב Real Estate Experts נמצאת מערכת ערכים חזקה שמנחה את כל מה שאנו עושים. עקרונות אלו מגדירים כיצד אנו משרתים לקוחות, בונים קשרים ומעצבים את עתיד הנדל\"ן."
+          ],
+          storyTitle: "הסיפור שלנו",
+          story: [
+            "החברה נוסדה ב-2010 על ידי רווי שארמה, והחלה כמיזם של אדם אחד עם תשוקה עמוקה לנדל\"ן. תוך מספר שנים גדלנו ממשרד קטן לצוות דינמי של מעל 50 סוכנים בערים רבות.",
+            "במהלך השנים מכרנו מעל 10,000 בתים, עזרנו לאלפי משקיעים להגדיל את הונם, והרווחנו את אמון המשפחות מכל שכבות האוכלוסייה. כיום אנו משלבים ידע שוק עמוק עם טכנולוגיה מתקדמת כדי לספק חוויית נדל\"ן פשוטה, מהירה וללא מתחים."
+          ],
+          teamTitle: "הכירו את הצוות",
+          team: [
+            {name: "רווי שארמה", role: "מייסד ומנכ\"ל", desc: "רווי מביא עמו 20 שנות ניסיון בנדל\"ן ופיננסים, ומוביל את החברה בחדשנות ואמון."},
+            {name: "אניטה ראו", role: "מנהלת סוכנים", desc: "אניטה סגרה מעל 500 עסקאות, מתמחה בבתים יוקרתיים, משקיעים ורוכשים ראשונים. היא אשת המקצוע שלך לנדל\"ן."},
+            {name: "קארן מהטה", role: "יועץ נדל\"ן בכיר", desc: "יכולות המשא ומתן והאנליטיקה של קארן הופכות אותו ליועץ יקר ערך להשקעות ונדל\"ן מסחרי."}
+          ],
+          whyTitle: "למה לבחור בנו",
+          why: [
+            {icon: "🏆", title: "ניסיון", desc: "עם למעלה מעשור בענף, אנו מבינים מגמות שוק, תמחור ודקויות משפטיות שחוסכות לך זמן וכסף."},
+            {icon: "🤝", title: "אמון", desc: "לקוחותינו ממליצים עלינו כי אנו מעריכים יושרה, מקיימים הבטחות ותמיד שמים את טובתך בראש."},
+            {icon: "💼", title: "תמיכה", desc: "אנחנו לא כאן רק למכירה. מהמסמכים המשפטיים ועד להמלצות עיצוב פנים, התמיכה המלאה שלנו מבטיחה מעבר חלק."}
+          ],
+          ctaTitle: "בואו נביא אתכם הביתה",
+          ctaDesc: "בין אם אתם קונים, מוכרים, משקיעים או רק בודקים אפשרויות, אנחנו כאן לעזור. קבעו פגישת ייעוץ חינם ונהפוך את מסע הנדל\"ן שלכם להצלחה.",
+          ctaBtn: "צור קשר",
+          quickLinks: "קישורים מהירים",
+          quickLinksList: ["בית", "בית 2", "עלינו", "שירותים", "בלוג", "צור קשר"],
+          ourServices: "השירותים שלנו",
+          ourServicesList: [
+            "בית משפחתי מודרני",
+            "דירת יוקרה במרכז העיר",
+            "אחוזה משפחתית בפרברים",
+            "וילה יוקרתית על החוף",
+            "פנטהאוז סקייליין",
+            "מקום מפלט הררי כפרי"
+          ],
+          contactUs: "צור קשר",
+          email: "אימייל: info@dreamhomes.com",
+          phone: "טלפון: +91-9876543210"
+        }
+      };
+
+      function setLanguage(lang) {
+        // Header nav
+        const navLinks = document.querySelectorAll('.nav-links > li > a');
+        navLinks[0].textContent = translations[lang].nav[0]; // Home
+        navLinks[1].textContent = translations[lang].nav[3]; // About Us
+        navLinks[2].textContent = translations[lang].nav[4]; // Services
+        navLinks[3].textContent = translations[lang].nav[12]; // Blog
+        navLinks[4].textContent = translations[lang].nav[13]; // Contact Us
+        // Home dropdown
+        const homeDropdown = document.querySelectorAll('.nav-links > li.dropdown ul.dropdown-content li a');
+        homeDropdown[0].textContent = translations[lang].nav[1]; // Home 1
+        homeDropdown[1].textContent = translations[lang].nav[2]; // Home 2
+        // Services dropdown
+        const servicesDropdown = document.querySelectorAll('.nav-links > li.dropdown ul.dropdown-content li a');
+        servicesDropdown[2].textContent = translations[lang].nav[5]; // All Services
+        servicesDropdown[3].textContent = translations[lang].nav[6]; // Modern Family Home
+        servicesDropdown[4].textContent = translations[lang].nav[7]; // Luxury Downtown Apartment
+        servicesDropdown[5].textContent = translations[lang].nav[8]; // Suburban Family Estate
+        servicesDropdown[6].textContent = translations[lang].nav[9]; // Beachfront Luxury Villa
+        servicesDropdown[7].textContent = translations[lang].nav[10]; // Skyline Penthouse Suite
+        servicesDropdown[8].textContent = translations[lang].nav[11]; // Rustic Mountain Retreat
+
+        // Hero section
+        document.querySelector('.hero-text h1').textContent = translations[lang].heroTitle;
+        document.querySelector('.hero-text p').innerHTML = translations[lang].heroDesc;
+
+        // Mission
+        document.querySelectorAll('.our-story-section')[0].querySelector('h2').textContent = translations[lang].missionTitle;
+        const missionPs = document.querySelectorAll('.our-story-section')[0].querySelectorAll('p');
+        translations[lang].mission.forEach((txt, i) => { if (missionPs[i]) missionPs[i].textContent = txt; });
+
+        // Story
+        document.querySelectorAll('.our-story-section')[1].querySelector('h2').textContent = translations[lang].storyTitle;
+        const storyPs = document.querySelectorAll('.our-story-section')[1].querySelectorAll('p');
+        translations[lang].story.forEach((txt, i) => { if (storyPs[i]) storyPs[i].textContent = txt; });
+
+        // Values
+        document.querySelectorAll('.our-story-section')[2].querySelector('h2').textContent = translations[lang].valuesTitle;
+        const valuesPs = document.querySelectorAll('.our-story-section')[2].querySelectorAll('p');
+        translations[lang].values.forEach((txt, i) => { if (valuesPs[i]) valuesPs[i].textContent = txt; });
+
+        // Team
+        document.querySelector('.team-section h2').textContent = translations[lang].teamTitle;
+        const teamCards = document.querySelectorAll('.team-card');
+        translations[lang].team.forEach((member, i) => {
+          if (teamCards[i]) {
+            teamCards[i].querySelector('h3').textContent = member.name;
+            teamCards[i].querySelector('.role').textContent = member.role;
+            teamCards[i].querySelectorAll('p')[1].textContent = member.desc;
+          }
+        });
+
+        // Why Choose Us
+        document.querySelector('.why-choose-section h2').textContent = translations[lang].whyTitle;
+        const whyCards = document.querySelectorAll('.why-card');
+        translations[lang].why.forEach((item, i) => {
+          if (whyCards[i]) {
+            whyCards[i].querySelector('.why-icon').textContent = item.icon;
+            whyCards[i].querySelector('h3').textContent = item.title;
+            whyCards[i].querySelector('p').textContent = item.desc;
+          }
+        });
+
+        // CTA
+        document.querySelector('.cta-section h2').textContent = translations[lang].ctaTitle;
+        document.querySelector('.cta-section p').textContent = translations[lang].ctaDesc;
+        document.querySelector('.cta-section a.cta-button').textContent = translations[lang].ctaBtn;
+
+        // Footer
+        document.querySelector('.footer-links h3').textContent = translations[lang].quickLinks;
+        const quickLinks = document.querySelectorAll('.footer-links ul li a');
+        translations[lang].quickLinksList.forEach((txt, i) => { if (quickLinks[i]) quickLinks[i].textContent = txt; });
+        document.querySelector('.footer-services h3').textContent = translations[lang].ourServices;
+        const servicesLinks = document.querySelectorAll('.footer-services ul li a');
+        translations[lang].ourServicesList.forEach((txt, i) => { if (servicesLinks[i]) servicesLinks[i].textContent = txt; });
+        document.querySelector('.footer-contact h3').textContent = translations[lang].contactUs;
+        document.querySelector('.footer-contact p:nth-of-type(1)').textContent = translations[lang].email;
+        document.querySelector('.footer-contact p:nth-of-type(2)').textContent = translations[lang].phone;
+
+        // Set dir for Arabic/Hebrew
+        if (lang === 'ar' || lang === 'he') {
+          document.body.setAttribute('dir', 'rtl');
+        } else {
+          document.body.setAttribute('dir', 'ltr');
+        }
+      }
+
+      document.getElementById('language-select').addEventListener('change', function() {
+        setLanguage(this.value);
+      });
+      setLanguage(document.getElementById('language-select').value);
+      function contactRedirect() {
+        window.location.href = "contact.html";
+      }
+    </script>
+  </body>
 </html>
