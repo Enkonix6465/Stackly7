@@ -1,10 +1,4 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #121212;
-    color: #ddd;
-    display: flex;
-}
+ 
 
 /* Sidebar */
 .sidebar {
@@ -16,6 +10,7 @@ body {
     left: 0;
     top: 0;
     display: flex;
+    overflow: auto;
     flex-direction: column;
     padding-top: 20px;
     border-right: 1px solid #333;
@@ -45,7 +40,7 @@ body {
 
 /* Main Content */
 .main-content {
-    margin-left: 220px;
+    margin-left: 20px;
     flex: 1;
     padding: 20px;
     color: #ddd;
@@ -106,7 +101,7 @@ table tr:hover {
     }
 
     .main-content {
-        margin-left: 100px;
+        /* margin-left: 100px; */
     }
 }
 
@@ -166,7 +161,7 @@ body {
 
 /* Main Content */
 .main-content {
-    margin-left: 220px;
+    /* margin-left: 220px; */
     flex: 1;
     padding: 20px;
     transition: background 0.3s, color 0.3s;
@@ -221,7 +216,7 @@ table tr:hover {
     }
 
     .main-content {
-        margin-left: 100px;
+        /* margin-left: 100px; */
     }
 }
 
