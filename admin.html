@@ -4,129 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard_The_Stackly_Dightal_Marketing</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="admin.css" />
   </head>
   <body>
-    <button
-      id="openSidebarBtn"
-      style="
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        font-size: 20px;
-        z-index: 1000;
-        display: block;
-      "
-    >
-      ☰
-    </button>
-    <div class="sidebar" id="sidebar" style="display: none">
-      <button
-        id="closeSidebarBtn"
-        style="
-          float: right;
-          font-size: 50px;
-          background: none;
-          border: none;
-          top: 0;
-          cursor: pointer;
-          color: white;
-        "
-      >
-        ×
-      </button>
-
-      <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
-      <a href="#" class="active" onclick="showSection('users')">👤 Users</a>
-      <a href="#" onclick="showSection('campaigns')">📈 Campaigns</a>
-      <a href="#" onclick="showSection('content')">✏️ Content</a>
-      <a href="#" onclick="showSection('leads')">👥 Leads</a>
-      <a href="#" onclick="showSection('analytics')">📊 Analytics</a>
-      <a href="#" onclick="showSection('integrations')">⚙️ Integrations</a>
-      <a href="/home.html">🏠 Home</a>
-      <a href="/home2.html">🏠 Home 2</a>
-      <a href="/about.html">📖 About us</a>
-      <a href="/services.html">🛠️ Services</a>
-      <a href="/contact.html">📞 Contact</a>
-  <a href="/login.html">⎋ Log out</a>
-    </div>
-
-    <div class="main-content">
-      <header>Admin Dashboard</header>
-
-      <!-- Users Section -->
-      <div id="usersSection">
-        <div class="card">
-          Total Registered Users: <span id="userCount">0</span>
-        </div>
-        <table id="userTable">
-          <thead>
-            <tr>
-              <th>Full Name</th>
-              <th>Email</th>
-              <th>Registered At</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Dashboard</h2>
+        <button id="closeSidebarBtn" class="close-btn">&times;</button>
       </div>
 
-      <!-- Campaigns Section (Enhanced Design) -->
-      <div id="campaignsSection" style="display: none">
-        <h2 style="color: #007bff">Campaigns Overview</h2>
+      <nav class="sidebar-nav">
+        <a href="#" class="active" onclick="showSection('users')">
+          <i class="fas fa-users"></i> Users</a
+        >
+        <a href="#" onclick="showSection('campaigns')">
+          <i class="fas fa-chart-line"></i> Campaigns</a
+        >
+        <a href="#" onclick="showSection('content')">
+          <i class="fas fa-pencil-alt"></i> Content</a
+        >
+        <a href="#" onclick="showSection('leads')">
+          <i class="fas fa-handshake"></i> Leads</a
+        >
+        <a href="#" onclick="showSection('analytics')">
+          <i class="fas fa-chart-bar"></i> Analytics</a
+        >
+        <a href="#" onclick="showSection('integrations')">
+          <i class="fas fa-cogs"></i> Integrations</a
+        >
+      </nav>
 
-        <!-- Stats Summary -->
+      <div class="sidebar-footer">
+        <a href="/home.html"><i class="fas fa-home"></i> Home</a>
+        <a href="/about.html"><i class="fas fa-info-circle"></i> About us</a>
+        <a href="/services.html"><i class="fas fa-tools"></i> Services</a>
+        <a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="/login.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+      </div>
+
+      <button id="themeToggle" class="theme-btn">
+        <i class="fas fa-moon"></i> Dark Mode
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <button id="openSidebarBtn" class="open-btn">&#9776;</button>
+        <div class="header-title">Admin Dashboard</div>
+      </header>
+
+      <!-- Users Section -->
+      <div id="usersSection" class="content-section">
+        <div class="card summary-card">
+          <h4>Total Registered Users</h4>
+          <p id="userCount">0</p>
+        </div>
+        <div class="card data-table">
+          <h3>User List</h3>
+          <div class="table-responsive">
+            <table id="userTable">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Registered At</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campaigns Section -->
+      <div id="campaignsSection" class="content-section" style="display: none">
         <div class="stats-container">
           <div class="stat-card">
-            <h3>Total Users</h3>
+            <h4>Total Users</h4>
             <p id="totalUsersStat">0</p>
           </div>
           <div class="stat-card">
-            <h3>Today's Registrations</h3>
+            <h4>Today's Registrations</h4>
             <p id="todaysUsersStat">0</p>
           </div>
           <div class="stat-card">
-            <h3>Peak Day</h3>
+            <h4>Peak Day</h4>
             <p id="peakDayStat">N/A</p>
           </div>
         </div>
-
-        <!-- Chart Area -->
-        <div class="chart-container">
+        <div class="chart-container card">
           <canvas id="campaignChart"></canvas>
         </div>
       </div>
 
       <!-- Content Section -->
-      <div id="contentSection" style="display: none">
-        <h2>Content Management</h2>
-
-        <!-- Subsection Cards -->
+      <div id="contentSection" class="content-section" style="display: none">
         <div class="content-subsections">
           <div class="content-card" onclick="showContentPanel('blog')">
-            <h3>📝 Blog Posts</h3>
-            <p>
-              Create, edit, and track all blog content for Real estate and
-              property listings.
-            </p>
+            <i class="fas fa-blog"></i>
+            <h3>Blog Posts</h3>
+            <p>Create, edit, and track all blog content.</p>
           </div>
           <div class="content-card" onclick="showContentPanel('social')">
-            <h3>📱 Social Media Content</h3>
-            <p>Manage and schedule social media campaigns and posts.</p>
+            <i class="fas fa-share-alt"></i>
+            <h3>Social Media</h3>
+            <p>Manage and schedule social media campaigns.</p>
           </div>
           <div class="content-card" onclick="showContentPanel('email')">
-            <h3>📧 Email Campaigns</h3>
-            <p>Plan and create professional real estate emails.</p>
+            <i class="fas fa-envelope"></i>
+            <h3>Email Campaigns</h3>
+            <p>Plan and create professional email campaigns.</p>
           </div>
         </div>
 
-        <!-- Dynamic Panels -->
         <div class="content-panels">
-          <!-- Blog Panel -->
-          <div id="blogPanel" class="content-panel">
+          <div id="blogPanel" class="content-panel card">
             <h3>📝 Blog Posts</h3>
-
-            <!-- Blog Creation Form -->
             <form id="blogForm">
               <div class="input-group">
                 <label for="blogTitle">Blog Title</label>
@@ -180,9 +179,7 @@
                   required
                 ></textarea>
               </div>
-
-              <!-- Social Media Links -->
-              <h3>Social Media Links (Optional)</h3>
+              <h4>Social Media Links (Optional)</h4>
               <div class="input-group">
                 <label for="instagramLink">Instagram</label>
                 <input
@@ -215,25 +212,26 @@
                   placeholder="Enter LinkedIn URL"
                 />
               </div>
-
-              <button type="submit" class="btn">Save Blog</button>
+              <button type="submit" class="btn primary-btn">Save Blog</button>
             </form>
-
-            <!-- Existing Blogs -->
             <h4>Existing Blogs</h4>
             <ul id="blogList"></ul>
           </div>
-          <div id="socialPanel" class="content-panel" style="display: none">
+          <div
+            id="socialPanel"
+            class="content-panel card"
+            style="display: none"
+          >
             <h3>📱 Social Media Content</h3>
-            <ul>
+            <ul class="list-items">
               <li>Schedule social media campaigns</li>
               <li>View social content calendar</li>
               <li>Manage trending hashtags</li>
             </ul>
           </div>
-          <div id="emailPanel" class="content-panel" style="display: none">
+          <div id="emailPanel" class="content-panel card" style="display: none">
             <h3>📧 Email Campaigns</h3>
-            <ul>
+            <ul class="list-items">
               <li>Design new email templates</li>
               <li>View email performance metrics</li>
               <li>Manage mailing lists</li>
@@ -242,17 +240,12 @@
         </div>
       </div>
 
-      <div id="leadsSection" style="display: none">
-        <h2>Leads</h2>
-
-        <!-- Leads Panel -->
-        <div id="leadsPanel" class="content-panel">
+      <div id="leadsSection" class="content-section" style="display: none">
+        <div class="card">
           <h3>Lead Details</h3>
           <div class="leads-container">
-            <!-- Lead Card 1 -->
             <div class="lead-card">
               <div class="lead-card-inner">
-                <!-- Front Side -->
                 <div class="lead-card-front">
                   <img
                     src="https://i.pinimg.com/1200x/55/63/31/556331581172c567af13dc5787455d74.jpg"
@@ -261,7 +254,6 @@
                   <h4>Prudhvi Raj</h4>
                   <p>Marketing Lead</p>
                 </div>
-                <!-- Back Side -->
                 <div class="lead-card-back">
                   <h4>Prudhvi Raj</h4>
                   <p>Email: prudhvi@enkonix.in</p>
@@ -269,8 +261,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Lead Card 2 -->
             <div class="lead-card">
               <div class="lead-card-inner">
                 <div class="lead-card-front">
@@ -287,8 +277,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Lead Card 3 -->
             <div class="lead-card">
               <div class="lead-card-inner">
                 <div class="lead-card-front">
@@ -308,10 +296,8 @@
             </div>
           </div>
         </div>
-        <!-- Leadership Insights Section -->
-        <div id="leadershipInsights" class="content-panel">
+        <div id="leadershipInsights" class="content-panel card">
           <h2 class="section-title">Leadership Insights</h2>
-
           <div class="stats-wrapper">
             <div class="stat-card">
               <h3>Total Leads</h3>
@@ -329,8 +315,6 @@
               <p class="stat-number">92%</p>
             </div>
           </div>
-
-          <!-- Progress Bars -->
           <div class="progress-container">
             <h4>Team Performance</h4>
             <div class="progress-bar">
@@ -341,8 +325,6 @@
               <div class="progress-fill" style="width: 70%">70%</div>
             </div>
           </div>
-
-          <!-- Motivational Card -->
           <div class="quote-card">
             <p>
               "Leadership is not about titles, positions, or flowcharts. It is
@@ -353,16 +335,12 @@
         </div>
       </div>
 
-      <div id="analyticsSection" class="content-panel" style="display: none">
-        <h2>📊 User Analytics</h2>
-
-        <!-- Charts Container -->
-        <div class="chart-section">
+      <div id="analyticsSection" class="content-section" style="display: none">
+        <div class="chart-section card">
+          <h3>User Growth</h3>
           <canvas id="userGrowthChart" height="150"></canvas>
         </div>
-
-        <!-- Summary Info -->
-        <div class="analytics-summary">
+        <div class="analytics-summary card">
           <p>
             <strong>Total Registered Users:</strong>
             <span id="totalUsers">0</span>
@@ -371,23 +349,23 @@
         </div>
       </div>
 
-      <div id="integrationsSection" style="display: none">
-        <h2>⚙️ Integrations</h2>
-        <p>Manage your marketing integrations here.</p>
-
-        <div class="integration-panel">
-          <!-- Google Analytics -->
+      <div
+        id="integrationsSection"
+        class="content-section"
+        style="display: none"
+      >
+        <div class="integration-panel card">
+          <h3>Integrations</h3>
+          <p class="subtitle">Manage your marketing integrations here.</p>
           <div class="integration-item">
-            <h3>Google Analytics</h3>
-            <label class="switch">
-              <input type="checkbox" id="gaToggle" />
-              <span class="slider"></span>
-            </label>
-            <input
-              type="text"
-              id="gaKey"
-              placeholder="Enter Google Analytics Tracking ID"
-            />
+            <h4>Google Analytics</h4>
+            <div class="flex-row">
+              <label class="switch">
+                <input type="checkbox" id="gaToggle" />
+                <span class="slider"></span>
+              </label>
+              <input type="text" id="gaKey" placeholder="Enter Tracking ID" />
+            </div>
             <button
               class="test-btn"
               onclick="testConnection('gaKey', 'gaStatus')"
@@ -396,19 +374,19 @@
             </button>
             <p class="status" id="gaStatus"></p>
           </div>
-
-          <!-- Facebook Pixel -->
           <div class="integration-item">
-            <h3>Facebook Pixel</h3>
-            <label class="switch">
-              <input type="checkbox" id="fbToggle" />
-              <span class="slider"></span>
-            </label>
-            <input
-              type="text"
-              id="fbKey"
-              placeholder="Enter Facebook Pixel ID"
-            />
+            <h4>Facebook Pixel</h4>
+            <div class="flex-row">
+              <label class="switch">
+                <input type="checkbox" id="fbToggle" />
+                <span class="slider"></span>
+              </label>
+              <input
+                type="text"
+                id="fbKey"
+                placeholder="Enter Facebook Pixel ID"
+              />
+            </div>
             <button
               class="test-btn"
               onclick="testConnection('fbKey', 'fbStatus')"
@@ -417,19 +395,19 @@
             </button>
             <p class="status" id="fbStatus"></p>
           </div>
-
-          <!-- Mailchimp -->
           <div class="integration-item">
-            <h3>Mailchimp</h3>
-            <label class="switch">
-              <input type="checkbox" id="mcToggle" />
-              <span class="slider"></span>
-            </label>
-            <input
-              type="text"
-              id="mcKey"
-              placeholder="Enter Mailchimp API Key"
-            />
+            <h4>Mailchimp</h4>
+            <div class="flex-row">
+              <label class="switch">
+                <input type="checkbox" id="mcToggle" />
+                <span class="slider"></span>
+              </label>
+              <input
+                type="text"
+                id="mcKey"
+                placeholder="Enter Mailchimp API Key"
+              />
+            </div>
             <button
               class="test-btn"
               onclick="testConnection('mcKey', 'mcStatus')"
@@ -438,36 +416,15 @@
             </button>
             <p class="status" id="mcStatus"></p>
           </div>
-
-          <button class="btn" id="saveIntegrations">Save Integrations</button>
+          <button class="btn primary-btn" id="saveIntegrations">
+            Save Integrations
+          </button>
         </div>
       </div>
     </div>
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="analytics.js"></script>
     <script src="admin.js"></script>
   </body>
-  <script>
-    // Sidebar open/close logic
-    const sidebar = document.getElementById("sidebar");
-    const openBtn = document.getElementById("openSidebarBtn");
-    const closeBtn = document.getElementById("closeSidebarBtn");
-
-    // Ensure sidebar is closed and openBtn is visible on page load
-    window.addEventListener("DOMContentLoaded", function () {
-      sidebar.style.display = "none";
-      openBtn.style.display = "block";
-    });
-
-    closeBtn.onclick = function () {
-      sidebar.style.display = "none";
-      openBtn.style.display = "block";
-    };
-    openBtn.onclick = function () {
-      sidebar.style.display = "block";
-      openBtn.style.display = "none";
-    };
-  </script>
 </html>
